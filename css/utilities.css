@@ -1,0 +1,132 @@
+/* São classes de propósito único usadas para fazer pequenos ajustes rápidos direto no HTML, 
+sem precisar criar uma classe nova para o componente. Elas usam os tokens do passo 1..
+color_bg--*: Classes para mudar o fundo rapidamente (ex: .color_bg--dark { background-color: var(--preto); })..
+w-*: Classes de largura (ex: .w-100 { width: 100%; }). */
+
+.color_bg--green{ background-color: var(--color-green-90);}
+.color_bg--orange{ background-color: var(--color-orange);}
+.color_bg--white{ background-color: var(--color-white);}
+.color_bg--gray-90{ background-color: var(--color-gray-90);}
+
+.section_card-produto{
+     display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 100%;
+    overflow-x: auto;
+    gap: 80px;
+    /* background-color: yellow; */
+    padding: 60px 0;
+}
+.card_produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    width: 200px;
+    /* background-color: rgb(107, 107, 149); */
+}
+.card_produto:first-child{
+    margin-left: 90px;
+}
+.card_produto:last-child{
+    margin-right: 90px;
+}
+.card_produto p{
+    height: 40px;
+/* background-color: yellow; */
+}
+
+.card_produto-img{
+    width: 200px;
+    aspect-ratio: 1 / 1.4142;
+    object-fit: cover;
+
+}
+.logo-efm{
+    margin: 20px 0 0 20px;
+    width: 35%;
+}
+
+.nav_back-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-12);
+}
+/* .button_icon--md{
+    display: flex;
+    flex-direction: row;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: pink;
+}
+.button_icon--md img,
+.button_icon--md svg {
+    width: 24px;
+    color: ;
+    border-radius:;
+    fill: var(--color-gray-30);
+} */
+.div-teste{
+    display: flex;
+    background-color: blueviolet;
+    width: 1200px;
+}
+
+.container_content_chapters {
+    width: 100%;
+    background-color: var(--surface-1);
+    padding: var(--container-pad);
+    max-width: var(--w-max_cont);
+}
+.content_chapters{
+    display: flex;
+    justify-content: space-between;
+    /* background-color: green; */
+    padding: 0 0 20px 0;
+    max-width: var(--w-max-cont);
+}
+.content_chapters:not(:last-child){
+   border-bottom: solid 1px black;
+}
+.content_description{
+    width: 70%;
+    /* background-color: green; */
+}
+.content_description > .p_title{
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.content_btn {
+    height: 35px;
+    width: 35px;
+}
+.content_btn--check{
+    background-color: rgb(138, 185, 128);
+}
+/* para testar se botoes estao na altura minima de 44px de acessibilidade do Pattern */
+.div-teste-height-btn{
+    /* display: flex; */
+    background-color: rgb(255, 104, 129);
+    height: 44px;
+}
+
+.pg-title_p{
+    max-width: var(--w-max_cont);
+}
+.pg-title_h-title{
+    /* display: ; */
+    width: 100%;
+    max-width: var(--w-max_cont);
+    /* text-align: start; */
+    /* align-items: ; */
+    /* background-color: yellow; */
+}
+
+
+

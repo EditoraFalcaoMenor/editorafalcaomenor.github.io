@@ -1,0 +1,42 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--surface-1);
+    padding: var(--container-pad);
+    width: 100%;
+    max-width: var(--w-max_cont);
+}
+
+.form_field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: bisque; */
+}
+
+.form_input {
+    width: 100%;
+    height: 38px;
+    color: var(--text-default);
+    background-color: var(--surface-0);
+    border: solid 1px var(--color-gray-78);
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+input.form_input:focus{
+    /* outline: none;  */
+    outline: solid 1.2px #278fff;/* Remove a borda padrão do navegador */
+    /* border: solid 1px #278fff; */
+/* background-color: pink; */
+}
+input.form_input:hover{
+}
+input.form_input:valid{
+    /* border: solid 1.3px green; */
+}
+input.form_input:active{
+/* border: solid 1.3px rgb(69, 234, 168); */
+/* background-color: rgb(169, 69, 85); */
+}

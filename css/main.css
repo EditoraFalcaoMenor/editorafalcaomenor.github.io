@@ -1,0 +1,27 @@
+/* 1. Variáveis */
+@import "tokens.css";
+
+/* 2. Base e Reset */
+@import "base.css";
+
+/* 3. Estrutura do site */
+@import "layout.css";
+@import "radius.css";
+
+@import "dark-mode.css";
+
+
+/* 4. Componentes individuais */
+@import "components/button.css";
+@import "components/table.css";
+@import "components/tabs.css";
+@import "components/image.css";
+@import "components/form.css";
+@import "components/dropdown-menu.css";
+@import "components/nav.css";
+@import "components/nav2.css";
+
+/* 5. Utilitários para pequenas alterações */
+@import "on-surface.css";
+@import "utilities.css";
+@import "responsive.css"

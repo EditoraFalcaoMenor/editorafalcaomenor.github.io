@@ -1,0 +1,30 @@
+.img {
+    width: 100%;
+    max-height: calc(80dvh - 60px);
+    object-fit: contain;
+    background-color: var(--surface-1);
+}
+
+.img--lg {
+    width: var(--size-lg);
+}
+
+.img--md {
+    width: var(--size-md);
+}
+
+.img--sm {
+    width: var(--size-sm);
+}
+
+.img--xs {
+    width: var(--size-xs);
+}
+
+img {
+    width: 100%;
+}
+
+.pg-tittle_img{
+    max-height: 400px;
+}

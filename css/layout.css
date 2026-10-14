@@ -1,0 +1,687 @@
+.nav {
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    width: 100%;
+    background-color: var(--surface-0-09);
+    backdrop-filter: blur(var(--space-40));
+    /* position: sticky; */
+    position: fixed;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    /* justify-content: space-between; */
+    box-sizing: border-box;
+    /* padding: 0 var(--padding_nav-footer); */
+    gap: var(--space-20);
+    /* border-bottom: solid 1px transparent; */
+    border-bottom: solid 1px var(--color-gray-70);
+    z-index: 900;
+    /* box-shadow: 0 -8px 8px 10px hsla(0, 0%, 9%, 0.2); */
+    /* position: absolute; */
+    transition: all 0.5s ease;
+}
+
+.nav--sticky {
+    position: sticky;
+}
+
+.nav--static {
+    position: static;
+}
+
+.nav--scrolled {
+    /* box-shadow: 0 -8px 8px 10px hsla(0, 0%, 9%, 0.2); */
+    background-color: var(--color-transparent);
+    backdrop-filter: none;
+    border-bottom: solid 0 var(--color-gray-70);
+
+    & .in-nav_favicon-title {
+        display: none;
+    }
+}
+
+.nav_container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-24);
+    width: var(--w-nav_cont);
+    height: max-content;
+    /* background-color: aqua; */
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    /* justify-content: ; */
+}
+
+.nav_container--center {
+    justify-content: center;
+}
+
+/* .nav_container img {
+    width: 150px;
+} */
+.in-nav_group {
+    display: flex;
+    align-items: center;
+    gap: var(--space-10);
+
+}
+
+.in-nav_favicon {
+    display: flex;
+    align-items: center;
+    gap: var(--space-10);
+    /* margin-right: auto; */
+    /* background-color: yellow; */
+
+    & .in-nav_favicon-img {
+        height: 46px;
+        width: 46px;
+    }
+
+    /* background-color: pink; */
+    & .in-nav_favicon-title {
+        /* max-width: 110px; */
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-600);
+        text-wrap: nowrap;
+        /* overflow: hidden; */
+        /* margin: 0;
+        font-size: 1rem; */
+        /* display: none; */
+        /* background-color: yellow; */
+    }
+}
+
+/* inutilizado */
+.in-nav--end {
+    display: flex;
+    align-items: center;
+    gap: var(--space-16);
+    /* margin-left: auto; */
+    /* background-color: pink; */
+
+    & p {
+        font-size: var(--font-size-lg);
+        font-weight: 700;
+    }
+
+    /* background-color: pink; */
+    & .in-nav--end-title {
+        /* margin: 0;
+        font-size: 1rem; */
+        /* display: none; */
+        /* background-color: yellow; */
+    }
+}
+
+
+
+/* Links de Navegação */
+.in-nav_link-group {
+    display: flex;
+    align-items: center;
+    /* background-color: yellow; */
+
+    & .link-group_ul {
+        display: flex;
+        align-items: center;
+        /* background-color: burlywood; */
+        gap: var(--space-16);
+    }
+
+    & .link-group_li {
+        display: flex;
+        position: relative;
+        min-width: var(--space-44);
+        /* height: var(--space-44); */
+        align-items: center;
+        justify-content: center;
+        /* text-decoration: none; */
+        /* color: inherit; */
+        font-weight: 500;
+        /* transition: opacity 0.2s; */
+        /* background-color: rgb(0, 255, 140); */
+
+    }
+
+    & .link-group_li>a::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        min-width: var(--space-44);
+        min-height: var(--space-44);
+        /* background-color: rgba(255, 230, 0, 0.2); */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: auto;
+    }
+
+    & .item-nav_link-item--active {
+        /* background-color: rgb(0, 255, 140); */
+    }
+}
+
+/* nav                       = primary = 1nd
+nav static                   = seconday = 2nd
+nav static w/ buttons sticky = third =3nd */
+/* Seção do Logo */
+/* .navbar__brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-10, 8px);
+    background-color: yellow;
+}
+
+.navbar__logo-img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    background-color: yellow;
+}
+
+.navbar__brand-link {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    background-color: yellow;
+}
+
+/* Botão de Voltar */
+
+
+/* .navbar__link:hover {
+    opacity: 0.8;
+} */
+
+.section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--surface-0);
+    /* background-color: red; */
+    padding: 40px 0;
+    width: 100%;
+}
+
+.section_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: var(--w-sec_cont);
+    /* max-width: 100%; */
+    /* box-sizing: border-box; */
+    gap: var(--space-32);
+}
+
+.section-hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--surface-1);
+    background-color: rgb(168, 187, 227);
+    /* padding: 40px 0; */
+    width: 100%;
+    height: 50vh;
+    /* height: calc(40vh + 60px); */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    overflow: hidden;
+    position: relative;
+
+    & .section-hero_container {
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 50;
+        /* background-color: aquamarine; */
+    }
+}
+
+.section-hero_bg {
+    z-index: 5;
+    position: absolute;
+    /* top: 0; */
+    width: 100%;
+    height: 100%;
+    background-image: url(https://img.magnific.com/fotos-gratis/uma-paisagem-fantastica-de-nuvens_1232-490.jpg?semt=ais_hybrid&w=740&q=80z);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px) brightness(0.9);
+    /* Defina uma altura para a seção */
+}
+
+.content_container {
+    width: 100%;
+    background-color: var(--surface-1);
+    padding: var(--container-pad);
+    gap: var(--space-16, 0);
+
+}
+
+.content_container--transparent {
+    background-color: var(--color-transparent);
+}
+
+
+.slide_container-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    text-align: center;
+    /* background-color: greenyellow; */
+    overflow: hidden;
+   
+
+    & .slide_content-card {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding-inline: calc((100% - var(--w-sec_cont)) / 2);
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+        scroll-behavior: smooth;
+        /* background-color: rosybrown; */
+
+        & .card {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            gap: 24px;
+            width: 80%;
+            aspect-ratio: 4 / 6;
+            max-width: 300px;
+            background-color: var(--surface-1);
+            padding: var(--container-pad);
+            text-align: left;
+            scroll-snap-align: center;
+
+            & .card_title {
+                font-size: var(--font-size-xl);
+                font-weight: var(--font-weight-600);
+                /* font-weight: 800; */
+            }
+        }
+    }
+}
+
+.slide_container-card[name="produto_efm"] {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    text-align: center;
+    /* gap: 20px; */
+    /* background-color: greenyellow; */
+    overflow: hidden;
+
+    & .slide_content-card {
+        gap: var(--space-80);
+        padding-inline: calc((100dvw - var(--w-sec_cont)) / 2);
+        /* background-color: rosybrown; */
+
+        & .card-ghost {
+            display: flex;
+            width: 0px;
+        }
+
+        & .card {
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            gap: 24px;
+            width: 200px;
+            aspect-ratio: none;
+            max-width: 300px;
+            background-color: var(--color-transparent);
+            padding: 0;
+            text-align: left;
+            scroll-snap-align: center;
+            /* background-color: rosybrown; */
+
+            & p {
+                text-align: center;
+                height: 40px;
+            }
+
+            & img {
+                width: 200px;
+                height: 100%;
+                aspect-ratio: 1 / 1.4142;
+                object-fit: cover;
+                background-color: var(--surface-1);
+            }
+
+            & .card-counter {
+                height: fit-content;
+                /* width: fit-content; */
+                /* background-color: rosybrown; */
+                text-align: center;
+                align-content: center;
+                color: var(--text-default-2nd);
+
+            }
+        }
+    }
+}
+
+
+.container_links {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    /* padding: 0; */
+    /* background-color: rgba(255, 160, 122, 0.395); */
+    /* padding: 0;  */
+    /* list-style: none;  */
+    gap: 10px;
+    max-width: var(--w-max_cont);
+
+    &>li {
+        flex-grow: 1;
+        display: flex;
+    }
+}
+
+.container_links-items {
+    width: 100%;
+    text-align: center;
+    /* background-color: tan; */
+    background-color: var(--surface-1);
+    padding: 4px 10px;
+    color: var(--text-default-2nd);
+    border-radius: 6px;
+}
+
+/*  */
+.fluid-container {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    /* padding: 0; */
+    /* background-color: rgba(255, 160, 122, 0.395); */
+    /* padding: 0;  */
+    /* list-style: none;  */
+    gap: var(--space-10);
+
+    /* Regra geral para todos os filhos diretos */
+    &>* {
+        flex-grow: 1;
+        flex-shrink: 1;
+        /* Permite que eles encolham se necessário */
+        flex-basis: 0%;
+        /* Reseta a largura base para o flex-grow distribuir por igual */
+    }
+
+    /* 💡 Classes Utilitárias de Proporção (Modificadores) */
+    &>.w-30 {
+        flex-grow: 3;
+        /* Proporção de 3 partes */
+        /* overflow: hidden; */
+    }
+
+    &>.w-70 {
+        flex-grow: 7;
+        /* Proporção de 7 partes */
+    }
+
+    &>.w-50 {
+        flex-grow: 5;
+        /* Proporção de 5 partes (para 50/50) */
+    }
+}
+
+.fluid-container_item {
+    display: flex;
+    flex-direction: column;
+    /* max-width: 100%; */
+    /* background-color: var(--surface-2); */
+    /* padding: var(--container-pad); */
+    /* text-align: center; */
+    /* background: rgb(185, 250, 9); */
+
+    & .f-c_item-30 {
+        max-width: 30%;
+    }
+}
+
+
+.container_btn {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    max-width: var(--w-max_cont);
+    /* height: 46px; */
+    /* background-color: rgba(191, 255, 122, 0.395); */
+    gap: var(--space-10);
+
+    /* Regra geral para todos os filhos diretos */
+    &>* {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+    }
+
+    /* 🔒 Classe Utilitária para travar botões específicos em 46px */
+    &>.btn-fixed-46 {
+        flex-grow: 0;
+        /* 1. Proíbe o botão de crescer */
+        flex-shrink: 0;
+        /* 2. Proíbe o botão de encolher menos que 46px */
+        flex-basis: 46px;
+        /* 3. Trava a largura base em exatamente 46px */
+    }
+
+    &>.btn-fixed-35rem {
+        flex-grow: 0;
+        /* 1. Proíbe o botão de crescer */
+        flex-shrink: 1;
+        /* 2. Proíbe o botão de encolher menos que 46px */
+        flex-basis: 35rem;
+        /* 3. Trava a largura base em exatamente 46px */
+    }
+
+    /* 💡 Classes Utilitárias de Proporção (Modificadores) */
+    &>.w-30 {
+        flex-grow: 3;
+    }
+
+    &>.w-70 {
+        flex-grow: 7;
+    }
+
+    &>.w-50 {
+        flex-grow: 5;
+    }
+
+    &>.w-0 {
+        flex-grow: 0;
+    }
+}
+
+.container_btn--center {
+    justify-content: center;
+}
+
+.container_btn-items {
+    display: flex;
+    flex-direction: column;
+    /* background: rgb(185, 250, 9); */
+    width: fit-content;
+    /* Garante que o link/conteúdo ocupe o tamanho do pai flexível */
+    text-wrap: nowrap;
+}
+
+.container_max-width {
+    gap: var(--space-12);
+    /* background-color: green; */
+
+    & img {
+        height: 60%;
+    }
+}
+
+.pg-title__container_btn{
+    position: sticky;
+    bottom: 0;
+    background-color: var(--surface-0);
+    padding: 10px 0;
+    border-top: solid 1px var(--color-gray-70);
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--surface-1);
+    align-items: center;
+    padding: 40px 0;
+}
+
+.footer_container {
+    gap: var(--space-24);
+    align-items: start;
+}
+
+.footer_line {
+    border: none;
+    height: 1.3px;
+    background-color: var(--color-black);
+    width: 100%;
+}
+
+.footer_website-seal {
+    width: 70%;
+}
+
+.footer_omsiq-seal {
+    width: 100%;
+}
+
+.footer_nav {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    align-items: end;
+    gap: 20px;
+}
+
+.footer_btnVoltarTopo {
+    border: none;
+    /* background-color: #76b85f; */
+    cursor: pointer;
+
+}
+
+.seal_links {
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    gap: var(--space-8);
+}
+
+.footer_brand-seal {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: var(--space-12);
+}
+
+/* PEGUEI NA INTERNET */
+/*1. Esconde o marcador padrão */
+summary {
+    width: 100%;
+    list-style: none;
+    /* Para a maioria dos navegadores */
+    /* background-color: yellow; */
+}
+
+summary::-webkit-details-marker {
+    display: none;
+    /* Para versões antigas do Safari/Chrome */
+}
+
+/* 2. Cria o novo ícone usando ::before */
+summary::before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    background-image: url('../assets/icon-dark/arrow_forward_ios.svg');
+    /* Ou o Data URI acima */
+    background-size: contain;
+    transition: transform 0.2s ease;
+    /* Permite animar a rotação */
+}
+
+details {
+    /* background-color: aqua; */
+
+
+}
+
+.details_content {
+    width: 84%;
+    margin: 10px 0 0 8%;
+    /* background-color: pink; */
+}
+
+/* 3. Rotaciona o SVG suavemente ao abrir */
+details[open] summary::before {
+    transform: rotate(90deg);
+}
+
+
+.section_leitor-online {
+
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background-color: var(--surface-1);
+    padding: 80px 0 20px 0;
+
+}
+
+.container_leitor-online {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 100%; */
+    /* overflow: auto; */
+    /* gap: var(--space-2); */
+    width: 100%;
+
+    & .img-leitor-online {
+        width: 36%;
+        /* border: solid 2px red; */
+        /* box-shadow: 0 4px 8px 6px hsla(228, 33%, 12%, 0.1); */
+    }
+}

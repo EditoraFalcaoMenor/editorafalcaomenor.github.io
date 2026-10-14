@@ -1,0 +1,110 @@
+/* Estilos Globais de Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Container do Componente */
+.tabs {
+    width: 100%;
+}
+
+/* Barra de Navegação das Abas (Agora um UL estruturado) */
+.tabs_header {
+    position: sticky;
+    top: 60px;
+    display: flex;
+    flex-flow: row nowrap;
+    /* Garante que os itens fiquem travados lado a lado */
+    /* width: 100dvw; */
+    margin: 0 0 7px 0;
+    padding: 0;
+    /* Remove padding padrão da lista */
+    list-style: none;
+    /* Remove as bolinhas do UL */
+    /* background-color: var(--color-transparent); */
+    overflow-x: auto;
+    z-index: 10;
+    box-shadow: inset 0 -1.5px 0 var(--surface-1);
+    /* background: rgb(185, 250, 9); */
+}
+
+/* Oculta a barra de rolagem */
+.tabs_header::-webkit-scrollbar {
+    display: none;
+}
+
+/* Elemento Li (Garante o crescimento fluido e igualitário na linha) */
+.tabs_item {
+    flex-grow: 1;
+    /* flex-shrink: 1; */
+    /* flex-basis: 0%; */
+    display: flex;
+    /* Faz com que o botão interno estique e ocupe toda a área do li */
+}
+
+/* Botão da Aba */
+.tabs_button {
+    height: 46px;
+    width: 100%;
+    /* width: fit-content; */
+    /* Ocupa 100% da largura calculada pelo pai .tabs_item */
+    padding: 0 20px;
+    border: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    background-color: var(--color-transparent, transparent);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-500);
+    color: var(--color-gray-60);
+    
+}
+
+.tabs_button:hover {
+    color: var(--text-default);
+    /* background-color: aqua; */
+}
+
+/* Estado Ativo do Botão */
+.tabs_button--active {
+    border-bottom: 2.5px solid var(--color-primary);
+    & .tbs_btn-txt {
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        /* border-bottom: 2.5px solid var(--color-primary); */
+        color: var(--color-primary);
+        font-weight: var(--font-weight-600);
+        /* background-color: aqua; */
+    }
+}
+
+/* Container dos Conteúdos */
+.tabs_content-container {
+    width: 100%;
+    /* background-color: red; */
+    /* width: var(--w-sec_cont); */
+
+}
+
+/* Painel de Conteúdo */
+.tabs_panel {
+    display: none;
+    flex-direction: column;
+    /* gap: var(--space-16, 0); */
+    /* padding: var(--container-pad, 0); */
+    /* background-color: var(--surface-1, #aaff00); */
+    /* background-color:  #aaff00; */
+}
+
+/* Painel Ativo */
+.tabs_panel--active {
+    display: flex;
+}
+
+/* Esconde de forma semântica e limpa os painéis inativos */
+.tabs_panel[hidden] {
+    display: none !important;
+}

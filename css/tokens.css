@@ -1,0 +1,157 @@
+
+
+:root, [data-theme="light"] {
+  /* ================= PADDING ================= */
+  /* --padding-5dvw: 18px;
+  --padding_p: 2dvw;
+
+  --padding_section: 10dvw;
+  --padding_section--top: 5dvw;
+  --padding_nav-footer: 5dvw; */
+
+  /* --padding_container:; */
+  --container-pad: var(--space-24);
+
+
+  --btn-pad-sm: 6px 12px;
+  --btn-pad-md: 12px 22px;
+  --btn-pad-lg: 18px 34px;
+  --btn-pad-xl: 20px 44px;
+
+  /* ============ TAMANHOS ============ */
+  --w-nav_cont: 93vw;
+  --w-sec_cont: 93vw;
+  --w-max_cont: 40rem;
+
+  --size-auto: 100%;
+  --size-full: 100%;
+  --size-xl: 90%;
+  --size-lg: 85%;
+  --size-md: 76%;
+  --size-sm: 66%;
+  --size-xs: 60%;
+
+  --mp-max-w: ;
+
+  /* ============ ESPAÇAMENTOS ============ */
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-44: 44px;
+  --space-48: 48px;
+  --space-56: 56px;
+  --space-60: 60px; /*para o spacing nav*/
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* ================= TEXT SIZES ================= */
+
+  /* Display */
+  --md-sys-typescale-display-large: 400 3.5rem/4rem 'Roboto', sans-serif;
+  /* Headline */
+  --md-sys-typescale-headline-medium: 400 1.75rem/2.25rem 'Roboto', sans-serif;
+  /* Title */
+  --md-sys-typescale-title-medium: 500 1rem/1.5rem 'Roboto', sans-serif;
+  /* Body */
+  --md-sys-typescale-body-medium: 400 0.875rem/1.25rem 'Roboto', sans-serif;
+  /* Label */
+  --md-sys-typescale-label-large: 500 0.875rem/1.25rem 'Roboto', sans-serif;
+
+
+  
+  --font-size-xs: .75rem; /* por enquanto sem uso */
+  --font-size-sm: .875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.15rem;
+  /* --font-size-2lg: 1.265rem; */
+  --font-size-xl: 1.38rem;
+  --font-size-2xl: 1.813rem; 
+  --font-size-3xl: 2.341rem; 
+
+  /* =============== TEXT WEIGHT ==================*/
+  --font-weight-100: 100; /* thin */
+  --font-weight-200: 200; /* extra light */
+  --font-weight-300: 300; /* light */
+  --font-weight-400: 400; /* default */
+  --font-weight-500: 500; /* medium */
+  --font-weight-600: 600; /* semi bold */
+  --font-weight-700: 700; /* bold */
+  --font-weight-800: 800; /* extra bold */
+  --font-weight-900: 900; /* black */
+
+  /* ================= COLORS ================= */
+  --text-default: hsl(0, 0%, 0%);
+  --text-inverse: hsl(0, 0%, 100%);
+  --text-default-2nd: hsla(0, 0%, 50%);
+  --text-inverse-2nd: hsla(0, 0%, 80%);
+
+  --surface-0: hsl(0, 0%, 100%); /*fundo geral (body)*/
+  --surface-1: hsl(0, 0%, 95%); /*container, card*/
+  --surface-2: hsl(0, 0%, 83%); /*btn, inputs, menu*/
+  --surface-3: hsl(0, 0%, 80%); /**/
+
+  --on-surface-1: hsl(0, 0%, 80%);
+  --on-surface-2: hsl(0, 0%, 75%);
+
+  --color-white: hsl(0, 0%, 100%);
+  --surface-0-09: hsla(0, 0%, 100%, 0.8); /* .nav */
+  --color-black: hsl(0, 0%, 0%);
+
+  /* cores de marca para o website */
+  --color-primary: #3A89B0;
+  --color-secondary: #A8D1E6;
+
+  /* Cores para btn */
+  --btn-color-default: #BDD1DB;
+  --btn-color-filled: hsl(200, 55%, 38%);
+  --btn-color-tonal: #A8D1E6;
+  --btn-color-outlined: transparent;
+  --btn-color-text: transparent;
+  --btn-color-disabled: var(--color-gray-96);
+
+  --btn-border-disabled: dashed 2px var(--color-gray-85);
+
+  --btn-color-default--hover: #b9c7ce;
+  --btn-color-filled--hover: hsl(200, 40%, 45%);
+  --btn-color-tonal--hover: hsl(200, 50%, 75%);
+  --btn-color-outlined--hover: var(--color-gray-95);
+  --btn-color-text--hover: #a8d1e64d;
+
+  --color-transparent: transparent;
+
+  --color-gray-03: hsl(0, 0%, 3%);
+  --color-gray-05: hsl(0, 0%, 5%);
+  --color-gray-10: hsl(0, 0%, 10%);
+  --color-gray-20: hsl(0, 0%, 20%);
+  --color-gray-30: hsl(0, 0%, 30%);
+  --color-gray-40: hsl(0, 0%, 40%);
+  --color-gray-50: hsl(0, 0%, 50%);
+  --color-gray-60: hsl(0, 0%, 60%);
+  --color-gray-70: hsl(0, 0%, 70%);
+  --color-gray-75: hsl(0, 0%, 75%);
+  --color-gray-78: hsl(0, 0%, 78%);
+  --color-gray-80: hsl(0, 0%, 80%);
+  --color-gray-83: hsl(0, 0%, 83%);
+  --color-gray-85: hsl(0, 0%, 85%);
+  --color-gray-90: hsl(0, 0%, 90%);
+  --color-gray-95: hsl(0, 0%, 95%);
+  --color-gray-96: hsl(0, 0%, 96%);
+  --color-gray-97: hsl(0, 0%, 97%);
+  --color-gray-98: hsl(0, 0%, 98%);
+  --color-gray-99: hsl(0, 0%, 99%);
+
+  --color-green-90: rgb(204, 255, 207);
+  --color-orange: hsl(27, 100%, 55%);
+
+
+}

@@ -1,0 +1,1 @@
+24dp_HSL(0, 0%, 20%)_FILL1_wght400_GRAD-25_opsz24

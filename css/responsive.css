@@ -1,0 +1,100 @@
+/* para telas maiores que a de celulares */
+@media (min-width: 768px) {
+    :root {
+        --container-pad: var(--space-40);
+        --w-sec_cont: 85%;
+    }
+
+    .section_container,
+    .footer_container {
+        /* width: 85%; */
+        /* max-width: 1200px; */
+    }
+
+    .tabs__item {
+        flex-grow: 0;
+    }
+
+    .slide_container-card .slide_content-card {
+        scrollbar-width: thin;
+    }
+    .slide_container-card .slide_content-card .card{
+        margin-bottom: 50px;
+    }
+    
+
+    .footer_website-seal {
+        width: 30%;
+        /* background-color: yellow; */
+    }
+
+    .footer_omsiq-seal {
+        width: 85%;
+    }
+
+    .footer_brand-seal {
+        flex-direction: row;
+    }
+
+    .logo-efm {
+        margin: 20px 0 0 20px;
+        width: 15%;
+    }
+
+    .container_max-width {
+        min-height: 80dvh;
+        position: sticky;
+        top: 70px;
+        justify-content: space-between;
+    }
+
+
+}
+
+@media (min-width: 425px) {
+    :root {
+
+        --size-lg: 65%;
+        --size-md: 55%;
+        --size-sm: 48%;
+        --size-xs: 40%;
+    }
+}
+
+/* para telas menores que de notebook */
+@media (max-width: 1023px) {
+    .in-nav_link-group {
+        display: none;
+    }
+
+    .footer_brand-seal {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+
+/* Para Tela de Celulares */
+@media screen and (max-width: 768px) {
+
+
+    .section_container {
+        /* background-color: red; */
+    }
+
+    .fluid-container {
+        flex-direction: column;
+        gap: var(--space-32);
+    }
+
+    .section_leitor-online {
+        /* background-color: red; */
+    }
+
+    .img-leitor-online {
+        width: 100% !important;
+        /* margin: 0 10px; */
+        /* border: solid 2px red; */
+
+    }
+}

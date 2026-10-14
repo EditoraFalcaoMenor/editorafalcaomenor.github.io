@@ -1,0 +1,105 @@
+/* tabelas Default*/
+table {
+    width: 100%;
+    /* height: ; */
+    border: 2px solid var(--color-gray-85);
+    /* border: none; */
+    border-collapse: collapse;
+    /* position: relative; */
+    /* border-radius: 9px; */
+    /* overflow: hidden; */
+    /* background-color: var(--color-white); */
+    background-color: var(--surface-1);
+}
+
+td,
+th {
+    border: 1px solid var(--color-gray-85);
+    /* padding: 20px 5px; */
+    padding: 15px 10px;
+    text-align: center;
+    /*alinhamento horizontal*/
+    vertical-align: middle;
+    /*alinhamento vertical*/
+}
+
+thead {
+    background-color: var(--color-gray-85);
+}
+
+/* Tabelas */
+
+
+.table-style {
+    /* display: flex; */
+    flex-direction: column;
+    border: none;
+    /* padding: 20px; */
+    /* box-sizing: border-box; */
+    width: 100%;
+}
+
+.table-style_thead {
+    background-color: var(--surface-1);
+}
+
+.table-style :where(th, td) {
+    /* border: solid 0 0 1px 0 red; */
+    text-align: start;
+    border: 0;
+    /* background-color: yellow; */
+}
+
+.table-style {
+    & th {
+        padding: 10px 10px 20px 10px;
+        font-size: var(--font-size-lg);
+        /* background-color: aqua; */
+        border-bottom: solid 1px var(--on-surface-1);
+    }
+
+    & td {
+        /* background-color: yellow; */
+    }
+    & td:hover {
+        background-color: var(--color-gray-90);
+        /* border-radius: 999px; */
+    }
+
+    & tbody>tr:not(:last-child) {
+        border-bottom: solid 1px var(--on-surface-1);
+
+    }
+    & tbody>tr>td:first-child {
+        /* border-bottom: solid 1px red; */
+        /* background-color: aqua; */
+        color: var(--text-default-2nd);
+    }
+    & tbody>tr>td:last-child {
+        /* border-bottom: solid 1px red; */
+        /* background-color: aqua; */
+        font-weight: 500;
+        color: var(--text-default);
+    }
+
+
+}
+.table-style_ul{
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+    gap: var(--space-4);
+
+    & li{
+        /* background-color: gold; */
+        /* min-height: 30px; */
+    }
+}
+
+
+.container_table-style {
+    width: 100%;
+    background-color: var(--surface-1);
+    padding: var(--container-pad);
+    max-width: var(--w-max_cont);
+}
