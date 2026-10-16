@@ -42,16 +42,6 @@
     border-radius: var(--space-16);
 }
 
-
-.content_container,
-.form,
-.tabs__panel,
-.container_table-style,
-.fluid-container_item {
-    /* border-radius: var(--space-16); */
-    /* background-color: #000!important; */
-}
-
 .form_input {
     border-radius: var(--space-6);
 }

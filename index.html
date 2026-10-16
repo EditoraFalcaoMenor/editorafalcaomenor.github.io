@@ -56,15 +56,12 @@
                 <div class="in-nav_favicon">
 
                     <img src="assets/favicon/efm-favicon-512--reverse.png" class="in-nav_favicon-img" alt="">
-                    <p class="in-nav_favicon-title">Editora Falcão Menor</p>
+                    <p class="in-nav_favicon-title">Início</p>
                     <!-- <h3 class="navbar_back-title">Home</h3> -->
                 </div>
             </div>
 
             <div class="in-nav_group">
-                <a href="" class="btn btn-icon--md">
-                    <img src="assets/icon-dark/menu.svg" alt="" class="btn_svg">
-                </a>
 
                 <!-- <a href="" class="btn btn--md">
                     <img src="assets/icon-dark/search.svg" alt="">
@@ -76,11 +73,6 @@
                         <img src="assets/icon-dark/settings.svg" alt="" class="btn_svg">
                     </button>
                     <ul class="dropdown-menu" data-dropdown-menu>
-                        <li class="dropdown-menu_item"><span>Você</span></li>
-                        <li class="dropdown-menu_item"><span>Configurações</span></li>
-                        <li class="dropdown-menu_item">
-                            <a href="login.html" class="dropdown-menu_link">Sair</a>
-                        </li>
                         <li class="dropdown-menu_item">
                             <button type="button" data-theme-toggle>🖥️ Sistema</button>
                         </li>
@@ -103,18 +95,21 @@
     <section class="section-hero">
 
         <div class="section-hero_container">
+            <!-- <div class="section_container"><img src="assets/logo-efm-vertical.svg" alt="" class="logo-efm"></div> -->
             <h1 class="h1">
                 Hello World!
             </h1>
             <p>Editora Falcão Menor</p>
         </div>
 
+
         <!-- <div class="section-hero_bg"></div> -->
     </section>
 
-    <section class="section">
+
+    <!-- <section class="section">
         <div class="section_container"><img src="assets/logo-efm-horizontal.svg" alt="" class="logo-efm"></div>
-    </section>
+    </section> -->
 
 
     <section class="section">
@@ -189,23 +184,6 @@
         </div>
     </section>
 
-    <script>
-        const elementoScroll = document.getElementById("meu-scroll");
-
-        if (elementoScroll) {
-            // Salva a posição sempre que o usuário rolar
-            elementoScroll.addEventListener("scroll", () => {
-                localStorage.setItem("posicao-scroll", elementoScroll.scrollLeft);
-            });
-        }
-        if (elementoScroll) {
-            const posicaoSalva = localStorage.getItem("posicao-scroll");
-            if (posicaoSalva) {
-                elementoScroll.scrollLeft = parseInt(posicaoSalva, 10);
-            }
-        }
-    </script>
-
     <footer class="footer">
         <div class="section_container footer_container">
 
@@ -221,12 +199,6 @@
                         <p>path/efm</p>
                     </a>
                 </div>
-            </div>
-
-            <div class="footer_nav">
-                <button id="btnVoltarTopo" class="footer_btnVoltarTopo btn btn--md btn--outlined">
-                    voltar ao topo
-                </button>
             </div>
 
             <hr class="footer_line">

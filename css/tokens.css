@@ -1,6 +1,4 @@
-
-
-:root, [data-theme="light"] {
+:root {
   /* ================= PADDING ================= */
   /* --padding-5dvw: 18px;
   --padding_p: 2dvw;
@@ -55,20 +53,6 @@
   --space-80: 80px;
 
   /* ================= TEXT SIZES ================= */
-
-  /* Display */
-  --md-sys-typescale-display-large: 400 3.5rem/4rem 'Roboto', sans-serif;
-  /* Headline */
-  --md-sys-typescale-headline-medium: 400 1.75rem/2.25rem 'Roboto', sans-serif;
-  /* Title */
-  --md-sys-typescale-title-medium: 500 1rem/1.5rem 'Roboto', sans-serif;
-  /* Body */
-  --md-sys-typescale-body-medium: 400 0.875rem/1.25rem 'Roboto', sans-serif;
-  /* Label */
-  --md-sys-typescale-label-large: 500 0.875rem/1.25rem 'Roboto', sans-serif;
-
-
-  
   --font-size-xs: .75rem; /* por enquanto sem uso */
   --font-size-sm: .875rem;
   --font-size-md: 1rem;

@@ -5,12 +5,6 @@
         --w-sec_cont: 85%;
     }
 
-    .section_container,
-    .footer_container {
-        /* width: 85%; */
-        /* max-width: 1200px; */
-    }
-
     .tabs__item {
         flex-grow: 0;
     }
@@ -77,18 +71,9 @@
 /* Para Tela de Celulares */
 @media screen and (max-width: 768px) {
 
-
-    .section_container {
-        /* background-color: red; */
-    }
-
     .fluid-container {
         flex-direction: column;
         gap: var(--space-32);
-    }
-
-    .section_leitor-online {
-        /* background-color: red; */
     }
 
     .img-leitor-online {

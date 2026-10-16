@@ -4,12 +4,8 @@
 
 html,
 body {
-    /* width: 100%; */
-    /* max-width: 1000px; */
-    /* overflow-x: hidden; */
     background-color: var(--surface-0);
     scroll-behavior: smooth;
-
 }
 
 body,
@@ -42,10 +38,6 @@ body {
     position: relative;
 }
 
-/* * {
-    font-size: 1em;
-} */
-
 .open-sans-p {
     font-family: "Open Sans", sans-serif;
     font-optical-sizing: auto;
@@ -62,16 +54,6 @@ body {
 .path-link-mention {
     font-size: .86rem;
 }
-
-/* button{
-    display: flex;
-    border: none;
-    height: 20px;
-    margin: 0;
-    padding: 0;
-    background-color: #7ad1f9;
-} */
-
 a,
 a:visited {
     /* color: rgb(242, 0, 255); */
@@ -157,5 +139,5 @@ button {
 }
 
 .dropdown{
-    /* display: none; */
+    display: none;
 }
