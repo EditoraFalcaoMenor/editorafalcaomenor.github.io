@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<!-- original Marlon Siqueira | Designed by Merfos Pattern -->
+<!-- Initial publication on github.io | Jul **, 2026, **:** AM/PM UTC-3 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+
+    <script src="../js/theme.js"></script>
+
+    <link rel="canonical" href="https://mrzzo.github.io/pth/f/msq">
+    <meta name="share-text" content="Veja esse Folder: ">
+
+    <link rel="stylesheet" href="../css/main.css">
+
+
+    <script src="../js/script.js" defer></script>
+
+    <script src="../js/library.js" defer></script>
+    <script src="../js/titles.js" defer></script>
+
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/efm-favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon/efm-favicon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../assets/favicon/efm-favicon-512.png">
+    <link rel="apple-touch-icon" href="../assets/favicon/efm-favicon-180.png" sizes="180x180">
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="nav nav_home" data-scroll-class="nav_home--scrolled" data-scroll-threshold="1">
+        <div class="nav_container">
+
+            <div class="in-nav_group">
+                <!-- <a href="javascript:history.back()" class="btn btn-icon--md">
+                    <img src="assets/icon-dark/arrow_back.svg" alt="" class="btn_svg">
+                </a> -->
+
+                <div class="in-nav_favicon">
+
+                    <img src="../assets/favicon/efm-favicon-180.png" class="in-nav_favicon-img" alt="">
+                    <p class="in-nav_favicon-title">Editora Falcão Menor</p>
+                    <!-- <h3 class="navbar_back-title">Home</h3> -->
+                </div>
+            </div>
+
+            <div class="in-nav_link-group">
+                <ul class="link-group_ul">
+                    <li class="link-group_li"><a href="../" class="a">início</a></li>
+                    <li class="link-group_li"><a href="../titles/index.html" class="a">títulos</a></li>
+                    <li class="link-group_li"><a href="../my-list/index.html" class="a">minha lista</a></li>
+                    <li class="link-group_li"><a href="../blog/index.html" class="a">blog</a></li>
+                </ul>
+
+            </div>
+
+            <div class="in-nav_group">
+                <!-- <a href="" class="btn btn-icon--md">
+                    <img src="assets/icon-dark/settings.svg" alt="" class="btn_svg">
+                </a> -->
+                <div class="in-nav_group">
+
+                    <!-- Dropdown 2 -->
+                    <div class="dropdown">
+                        <button class="btn btn-icon--md" data-dropdown-toggle="menu-opcoes" aria-expanded="false"
+                            aria-controls="menu-opcoes" aria-label="Mais opções">
+                            <img src="../assets/icon-dark/settings.svg" alt="" class="btn_svg">
+                        </button>
+
+                        <ul class="dropdown-menu" id="menu-opcoes" data-dropdown-menu>
+                            <li class="dropdown-menu_item">
+                                <button type="button" data-theme-toggle>🖥️ Sistema</button>
+                            </li>
+                            <li class="dropdown-menu_item">
+                                <button id="debug-btn">Ativar Modo Debug</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Dropdown 1 -->
+                    <div class="dropdown">
+                        <button class="btn btn-icon--md" data-dropdown-toggle="menu-usuario" aria-expanded="false"
+                            aria-controls="menu-usuario" aria-label="Menu do usuário">
+                            <img src="../assets/icon-dark/menu.svg" alt="" class="btn_svg">
+                        </button>
+
+                        <ul class="dropdown-menu" id="menu-usuario" data-dropdown-menu>
+                            <li class="dropdown-menu_item"><a href="../" class="a">início</a></li>
+                            <li class="dropdown-menu_item"><a href="" class="a">títulos</a></li>
+                            <li class="dropdown-menu_item"><a href="../my-list/index.html" class="a">minha lista</a></li>
+                            <li class="dropdown-menu_item"><a href="../blog/index.html" class="a">blog</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!-- <div class="in-nav--end">
+                <a href="javascript:history.back()" class="btn btn-icon--md">
+                    <img src="assets/icon-dark/arrow_back.svg" alt="" class="btn_svg">
+                </a>
+                <p class="in-nav--end-title">Home</p>
+            </div> -->
+
+        </div>
+    </nav>
+
+
+    <section class="hero">
+        <div class="section_content">
+            <div class="hero_container hero_container--efm">
+                <h1 class="typo-display--sm">Títulos</h1>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="section">
+        <div class="section_container">
+            <div id="genre-filters" class="genre-filters"></div>
+
+            <div id="works-grid" class="works-grid-titles boder-radius_content"></div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="section_container footer_container">
+
+
+
+
+            <div class="footer_nav">
+                <ul>
+                    <li class="a"><a href="../" class="a">início</a></li>
+                    <li class="a"><a href="" class="a">títulos</a></li>
+                    <li class="a"><a href="../titles/" class="a">minha lista</a></li>
+                    <li class="a"><a href="../blog/" class="a">blog</a></li>
+                </ul>
+                </ul>
+                <!-- <ul>
+                    <li><a href="y.htm" class="a">página inicial</a></li>
+                    <li><a href="y.htm" class="a">Ilustrações</a></li>
+                    <li><a href="y.htm" class="a">Projetos</a></li>
+                    <li><a href="y.htm" class="a">página inicial</a></li>
+                    <li><a href="y.htm" class="a">Ilustrações</a></li>
+                    <li><a href="y.htm" class="a">Projetos</a></li>
+                </ul> -->
+
+            </div>
+
+            <hr class="footer_line">
+
+            <div class="footer_brand-container">
+                <div class="footer_brand-content">
+                    <p>&copy;
+                        <script>document.write(new Date().getFullYear())</script> - 2026
+                    </p>
+                    <button id="btnVoltarTopo" class="footer_btnVoltarTopo btn btn--md btn--outlined">
+                        voltar ao topo
+                    </button>
+                </div>
+
+                <div class="footer_brand-content">
+                    <div class="footer_brand-seal">
+                        <!-- <img src="assets/Vector.svg" class="footer_website-seal"> -->
+                        <img src="../assets/logo-efm-horizontal.svg" class="footer_website-seal">
+                        <div class="seal_links">
+                            <a href="https://mrzzo.github.io/pth/f/efm" target="_blank"
+                                class="btn btn--sm btn--outlined">
+                                <img src="https://mrzzo.github.io/pth/images/favicon-32.png" class="link-icon" alt="">
+                                <p>path/efm</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_brand-seal">
+                        <img src="../assets/logo-v1-omarlonsiqueira.svg" class="footer_omsiq-seal">
+                        <div class="seal_links">
+                            <a href="https://mrzzo.github.io/pth/f/msq" class="btn btn--sm btn--outlined">
+                                <img src="https://mrzzo.github.io/pth/images/favicon-32.png" class="link-icon" alt="">
+                                <p>path/msq</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -38,7 +38,7 @@
     display: flex;
     width: 100%;
     /* max-width: var(--max-w); */
-    max-width: var(--w-max-cont);
+    max-width: 35rem;
 }
 
 /* Para o container de btn */
@@ -114,8 +114,8 @@
 }
 
 .btn--outlined {
-    background-color: var(--btn-color-outlined);
-    border: solid 1px var(--color-gray-80);
+    background-color: var(--color-transparent);
+    border: solid 1px var(--btn-border-outlined);
 
     &.btn--outlined:hover {
         background-color: var(--btn-color-outlined--hover);
@@ -164,9 +164,17 @@
     height: 46px;
     width: 46px;
 }
+.btn-icon--lg {
+    height: 58px;
+    width: 58px;
+}
+.btn-icon--xl {
+    height: 70px;
+    width: 70px;
+}
 
 .btn_svg {
-    height: 24px;
+    height: 20px;
     /* background-color: palevioletred; */
 }
 
@@ -181,7 +189,7 @@
 .btn:hover {
 
     transition: all .1s ease-in;
-    background-color: var(--btn-color-default--hover);
+    background-color: var(--color-gray-75);
 
     &.btn--sm {
         border-radius: var(--space-12);

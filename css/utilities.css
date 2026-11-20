@@ -1,7 +1,18 @@
+/* São classes de propósito único usadas para fazer pequenos ajustes rápidos direto no HTML, 
+sem precisar criar uma classe nova para o componente. Elas usam os tokens do passo 1..
+color_bg--*: Classes para mudar o fundo rapidamente (ex: .color_bg--dark { background-color: var(--preto); })..
+w-*: Classes de largura (ex: .w-100 { width: 100%; }). */
+
+.color_bg--transparent{ background-color: var(--color-transparent);}
 .color_bg--green{ background-color: var(--color-green-90);}
 .color_bg--orange{ background-color: var(--color-orange);}
 .color_bg--white{ background-color: var(--color-white);}
 .color_bg--gray-90{ background-color: var(--color-gray-90);}
+.efm-color_bg--livro-arte-ainda-estou-aqui{ background-color: #dfe9f3;}
+.efm-color_bg--encontros{ background-color: #f0eaf9;}
+.efm-color_bg--ferreto{ background-color: #deefead8;}
+
+.color--surface-1{ background-color: var(--surface-1);}
 
 .section_card-produto{
      display: flex;
@@ -49,28 +60,41 @@
     align-items: center;
     gap: var(--space-12);
 }
-
+/* .button_icon--md{
+    display: flex;
+    flex-direction: row;
+    width: 46px;
+    height: 46px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: pink;
+}
+.button_icon--md img,
+.button_icon--md svg {
+    width: 24px;
+    color: ;
+    border-radius:;
+    fill: var(--color-gray-30);
+} */
 .div-teste{
     display: flex;
     background-color: blueviolet;
     width: 1200px;
 }
 
-.container_content_chapters {
-    width: 100%;
-    background-color: var(--surface-1);
-    padding: var(--container-pad);
-    max-width: var(--w-max_cont);
-}
 .content_chapters{
     display: flex;
     justify-content: space-between;
     /* background-color: green; */
     padding: 0 0 20px 0;
-    max-width: var(--w-max-cont);
+    /* gap: 20px; */
 }
 .content_chapters:not(:last-child){
    border-bottom: solid 1px black;
+}
+.content_chapters:not(:first-child){
+   padding: 20px 0 20px 0;
 }
 .content_description{
     width: 70%;
@@ -94,18 +118,5 @@
     background-color: rgb(255, 104, 129);
     height: 44px;
 }
-
-.pg-title_p{
-    max-width: var(--w-max_cont);
-}
-.pg-title_h-title{
-    /* display: ; */
-    width: 100%;
-    max-width: var(--w-max_cont);
-    /* text-align: start; */
-    /* align-items: ; */
-    /* background-color: yellow; */
-}
-
 
 

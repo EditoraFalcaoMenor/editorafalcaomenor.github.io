@@ -1,0 +1,621 @@
+{
+    "works": [
+        {
+            "id": "ttl-119498",
+            "efbn": "978-85-5860-724-7",
+            "slug": "livro-arte-volume-1-ainda-estou-aqui",
+            "title": "Livro Arte, volume 1: Ainda Estou Aqui",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia vero dignissimos eum sequi beatae rem ab suscipit quod temporibus ex odit provident, cupiditate, quisquam sint officiis vel aperiam unde laboriosam!",
+            "author": "Marlon Siqueira",
+            "theme": "efm-color_bg--livro-arte-ainda-estou-aqui",
+            "classification": {
+                "category": "comic",
+                "format": "scroll",
+                "genres": [
+                    "drama",
+                    "slice-of-life"
+                ],
+                "tags": [
+                    "family",
+                    "coming-of-age"
+                ],
+                "language": "pt-BR",
+                "age": "all"
+            },
+            "images": {
+                "img_cover": {
+                    "id": "img-7n2q",
+                    "src": "../assets/works/cover/cover-livro-arte-vol-1--xl.png"
+                },
+                "img_title": {
+                    "id": "img-5o2q",
+                    "src": "../assets/works/cover/cover-livro-arte-vol-1--xl.png"
+                },
+                "img_back-cover": {
+                    "id": "img-8m3p",
+                    "src": "../assets/works/deixa-estar/back-cover.webp"
+                },
+                "img_banner-1x1": {
+                    "id": "img-9k4r",
+                    "src": "../assets/works/deixa-estar/banner.webp"
+                },
+                "img_background": {
+                    "id": "img-2x5w",
+                    "src": "../assets/works/deixa-estar/background.webp"
+                }
+            },
+            "episodes": [
+                {
+                    "id": "ep-4nq-81xz",
+                    "season": 1,
+                    "number": 1,
+                    "slug": "unico",
+                    "title": "Único",
+                    "description": "O primeiro episódio da história.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-001",
+                            "src": "../assets/works/k7m-4q2x-81.png"
+                        },
+                        {
+                            "id": "img-page-002",
+                            "src": "../assets/works/p3a-9v6k-24.png"
+                        },
+                        {
+                            "id": "img-page-003",
+                            "src": "../assets/works/z8r-2m5w-67.png"
+                        },
+                        {
+                            "id": "img-page-004",
+                            "src": "../assets/works/b4n-7x1q-39.png"
+                        },
+                        {
+                            "id": "img-page-005",
+                            "src": "../assets/works/t9c-5j8p-42.png"
+                        },
+                        {
+                            "id": "img-page-006",
+                            "src": "../assets/works/h2v-6r4m-73.png"
+                        },
+                        {
+                            "id": "img-page-007",
+                            "src": "../assets/works/q5d-1k9x-58.png"
+                        },
+                        {
+                            "id": "img-page-008",
+                            "src": "../assets/works/m7f-3p2z-16.png"
+                        },
+                        {
+                            "id": "img-page-009",
+                            "src": "../assets/works/w4s-8n6c-91.png"
+                        },
+                        {
+                            "id": "img-page-010",
+                            "src": "../assets/works/a9k-5t3v-27.png"
+                        },
+                        {
+                            "id": "img-page-011",
+                            "src": "../assets/works/x6b-2q8m-45.png"
+                        },
+                        {
+                            "id": "img-page-012",
+                            "src": "../assets/works/r3p-7w5d-82.png"
+                        },
+                        {
+                            "id": "img-page-013",
+                            "src": "../assets/works/c8j-4v1n-63.png"
+                        },
+                        {
+                            "id": "img-page-014",
+                            "src": "../assets/works/n5z-9b7q-34.png"
+                        },
+                        {
+                            "id": "img-page-015",
+                            "src": "/assets/works/f2m-6x4r-79.png"
+                        },
+                        {
+                            "id": "img-page-016",
+                            "src": "/assets/works/y7h-3k9p-51.png"
+                        }
+                    ],
+                    "publishedAt": "2026-11-06",
+                    "status": true
+                }
+            ],
+            "status": "completed",
+            "releaseDate": "2026-11-06"
+        },
+        {
+            "id": "ttl-809425",
+            "efbn": "",
+            "slug": "urso",
+            "title": "URSO",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia vero dignissimos eum sequi beatae rem ab suscipit quod temporibus ex odit provident, cupiditate, quisquam sint officiis vel aperiam unde laboriosam!",
+            "author": "Marlon Siqueira",
+            "theme": "efm-color_bg--urso",
+            "classification": {
+                "category": "comic",
+                "format": "scroll",
+                "genres": [
+                    "adventure",
+                    "slice-of-life"
+                ],
+                "tags": [
+                    "family",
+                    "coming-of-age"
+                ],
+                "language": "pt-BR",
+                "age": "all"
+            },
+            "images": {
+                "img_cover": {
+                    "id": "img-7n2q",
+                    "src": "/assets/works/cover/cover-efm-base--xl.png"
+                },
+                "img_title": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_back-cover": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_banner-1x1": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_background": {
+                    "id": "",
+                    "src": ""
+                }
+            },
+            "episodes": [
+                {
+                    "id": "",
+                    "season": 1,
+                    "number": 1,
+                    "slug": "piloto",
+                    "title": "Piloto",
+                    "description": "Lorem Ipsum.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-01",
+                            "src": "/assets/works/img-r8k3m5q.png"
+                        },
+                        {
+                            "id": "img-page-02",
+                            "src": "/assets/works/img-v2n7x4p.png"
+                        },
+                        {
+                            "id": "img-page-03",
+                            "src": "/assets/works/img-c9w1j6z.png"
+                        },
+                        {
+                            "id": "img-page-04",
+                            "src": "/assets/works/img-b4t8q2m.png"
+                        },
+                        {
+                            "id": "img-page-05",
+                            "src": "/assets/works/img-h5p3v7k.png"
+                        },
+                        {
+                            "id": "img-page-06",
+                            "src": "/assets/works/img-z6m2r9x.png"
+                        },
+                        {
+                            "id": "img-page-07",
+                            "src": "/assets/works/img-f1q7n4c.png"
+                        }
+                    ],
+                    "publishedAt": "",
+                    "status": true
+                },
+                {
+                    "id": "",
+                    "season": 1,
+                    "number": 2,
+                    "slug": "solo-picnic",
+                    "title": "Solo Picnic",
+                    "description": "Lorem Ipsum.",
+                    "language": "pt-BR",
+                    "images": [],
+                    "publishedAt": "",
+                    "status": false
+                },
+                {
+                    "id": "",
+                    "season": 1,
+                    "number": 3,
+                    "slug": "lorem",
+                    "title": "Lorem",
+                    "description": "Lorem Ipsum.",
+                    "language": "pt-BR",
+                    "images": [],
+                    "publishedAt": "",
+                    "status": false
+                }
+            ],
+            "status": "soon",
+            "releaseDate": "2026-11-07"
+        },
+        {
+            "id": "ttl-418732",
+            "efbn": "978-85-786-4264-8",
+            "slug": "encontros",
+            "title": "ENCONTROS",
+            "description": "Lua é uma gata doméstica que, desde que foi adotada, passa seus dias caminhando pelos cômodos do apartamento de seu tutor. Contudo, tudo muda quando ela conhece um gato tigrado enquanto observava a rua, através de uma grande tela no terraço do apartamento. A presença dele desperta novos desejos e sentimentos. Ela agora quer conhecer mais do mundo com seus próprios olhos, poder sentir o chão sob suas patas e explorar o desconhecido — talvez ao lado de um novo companheiro.",
+            "author": "Marlon Siqueira",
+            "theme": "efm-color_bg--encontros",
+            "classification": {
+                "category": "comic",
+                "format": "scroll",
+                "genres": [
+                    "fantasy",
+                    "drama",
+                    "adventure"
+                ],
+                "tags": [
+                    "family",
+                    "coming-of-age"
+                ],
+                "language": "pt-BR",
+                "age": "all"
+            },
+            "images": {
+                "img_cover": {
+                    "id": "img-7n2q",
+                    "src": "/assets/works/cover/cover-encontros--xl.png"
+                },
+                "img_title": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_back-cover": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_banner-1x1": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_background": {
+                    "id": "",
+                    "src": ""
+                }
+            },
+            "episodes": [
+                {
+                    "id": "",
+                    "season": 1,
+                    "number": 1,
+                    "slug": "parte-1",
+                    "title": "Parte 1",
+                    "description": "Lorem Ipsum.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-001",
+                            "src": "/assets/works/k7m-4q2x-81.png"
+                        }
+                    ],
+                    "publishedAt": "",
+                    "status": false
+                },
+                {
+                    "id": "",
+                    "season": 1,
+                    "number": 2,
+                    "slug": "parte-2",
+                    "title": "Parte 2",
+                    "description": "Lorem Ipsum.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-001",
+                            "src": "/assets/works/k7m-4q2x-81.png"
+                        }
+                    ],
+                    "publishedAt": "",
+                    "status": false
+                },
+                {
+                    "id": "",
+                    "season": 1,
+                    "number": 3,
+                    "slug": "parte-3",
+                    "title": "Parte 3",
+                    "description": "Lorem Ipsum.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-001",
+                            "src": "/assets/works/k7m-4q2x-81.png"
+                        }
+                    ],
+                    "publishedAt": "",
+                    "status": false
+                }
+            ],
+            "status": "completed",
+            "releaseDate": "2024-10-21"
+        },
+        {
+            "id": "ttl-710469",
+            "efbn": "",
+            "slug": "ferretto",
+            "title": "Ferretto",
+            "description": "Lucas levava uma vida tranquila entre a escola, os amigos e sua rotina em família, até que um encontro inesperado com um pequeno filhote muda seus dias. Batizado de Ferretto, o novo integrante da casa logo conquista seu espaço, trazendo momentos divertidos e confusões para a rotina de Lucas. Entre partidas de vôlei, amizades, redes sociais e as descobertas da vida escolar, Lucas começa a vivenciar novas experiências, sentimentos e situações que podem tornar seus dias muito mais interessantes do que ele imaginava.",
+            "author": "Marlon Siqueira",
+            "theme": "efm-color_bg--ferreto",
+            "classification": {
+                "category": "comic",
+                "format": "scroll",
+                "genres": [
+                    "drama",
+                    "slice-of-life"
+                ],
+                "tags": [
+                    "family",
+                    "coming-of-age"
+                ],
+                "language": "pt-BR",
+                "age": "all"
+            },
+            "images": {
+                "img_cover": {
+                    "id": "img-7n2q",
+                    "src": "/assets/works/cover/cover-ferretto--xl.png"
+                },
+                "img_title": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_back-cover": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_banner-1x1": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_background": {
+                    "id": "",
+                    "src": ""
+                }
+            },
+            "episodes": [
+                {
+                    "id": "",
+                    "season": 1,
+                    "number": 1,
+                    "slug": "ferreto",
+                    "title": "Ferretto",
+                    "description": "Lorem Ipsum.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-001",
+                            "src": "/assets/works/k7m-4q2x-81.png"
+                        }
+                    ],
+                    "publishedAt": "",
+                    "status": false
+                },
+                {
+                    "id": "",
+                    "season": 1,
+                    "number": 2,
+                    "slug": "sala-de-aula",
+                    "title": "Sala de aula",
+                    "description": "Lorem Ipsum.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-001",
+                            "src": "/assets/works/k7m-4q2x-81.png"
+                        }
+                    ],
+                    "publishedAt": "",
+                    "status": false
+                },
+                {
+                    "id": "",
+                    "season": 1,
+                    "number": 3,
+                    "slug": "volei",
+                    "title": "Vôlei",
+                    "description": "Lorem Ipsum.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-001",
+                            "src": "/assets/works/k7m-4q2x-81.png"
+                        }
+                    ],
+                    "publishedAt": "",
+                    "status": false
+                }
+            ],
+            "status": "hiatus",
+            "releaseDate": "2024-07-04"
+        },
+        {
+            "id": "ttl-932184",
+            "efbn": "978-85-928-1435-0",
+            "slug": "horizonte-aberto",
+            "title": "Horizonte Aberto",
+            "description": "Uma jornada reflexiva sobre caminhos inesperados, amizades de infância que resistem ao tempo e a busca constante por um propósito em meio à rotina urbana.",
+            "author": "Marlon Siqueira",
+            "theme": "efm-color_bg--horizonte-aberto",
+            "classification": {
+                "category": "comic",
+                "format": "scroll",
+                "genres": [
+                    "slice-of-life",
+                    "drama"
+                ],
+                "tags": [
+                    "friendship",
+                    "journey"
+                ],
+                "language": "pt-BR",
+                "age": "all"
+            },
+            "images": {
+                "img_cover": {
+                    "id": "img-cov-ha1",
+                    "src": "/assets/works/cover/cover-efm-base--xl.png"
+                },
+                "img_title": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_back-cover": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_banner-1x1": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_background": {
+                    "id": "",
+                    "src": ""
+                }
+            },
+            "episodes": [
+                {
+                    "id": "ep-ha-01",
+                    "season": 1,
+                    "number": 1,
+                    "slug": "partida",
+                    "title": "Partida",
+                    "description": "O início de uma nova fase longe de casa.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-001",
+                            "src": "/assets/works/horizonte/ep1-01.png"
+                        },
+                        {
+                            "id": "img-page-002",
+                            "src": "/assets/works/horizonte/ep1-02.png"
+                        }
+                    ],
+                    "publishedAt": "2026-05-12",
+                    "status": true
+                },
+                {
+                    "id": "ep-ha-02",
+                    "season": 1,
+                    "number": 2,
+                    "slug": "novos-ventos",
+                    "title": "Novos Ventos",
+                    "description": "Encontros inesperados na praça central.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-001",
+                            "src": "/assets/works/horizonte/ep2-01.png"
+                        }
+                    ],
+                    "publishedAt": "2026-05-19",
+                    "status": true
+                },
+                {
+                    "id": "ep-ha-03",
+                    "season": 1,
+                    "number": 3,
+                    "slug": "retorno",
+                    "title": "Retorno",
+                    "description": "Reflexões ao fim da tarde.",
+                    "language": "pt-BR",
+                    "images": [],
+                    "publishedAt": "",
+                    "status": false
+                }
+            ],
+            "status": "ongoing",
+            "releaseDate": "2026-05-12"
+        },
+        {
+            "id": "ttl-304912",
+            "efbn": "",
+            "slug": "atras-da-lente",
+            "title": "Atrás da Lente",
+            "description": "Registrando detalhes cotidianos que costumam passar despercebidos, esta obra explora a perspectiva de quem observa o mundo através de fotografias analógicas.",
+            "author": "Marlon Siqueira",
+            "theme": "efm-color_bg--atras-da-lente",
+            "classification": {
+                "category": "comic",
+                "format": "scroll",
+                "genres": [
+                    "slice-of-life"
+                ],
+                "tags": [
+                    "art",
+                    "urban"
+                ],
+                "language": "pt-BR",
+                "age": "all"
+            },
+            "images": {
+                "img_cover": {
+                    "id": "img-cov-adl",
+                    "src": "/assets/works/cover/cover-efm-base--xl.png"
+                },
+                "img_title": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_back-cover": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_banner-1x1": {
+                    "id": "",
+                    "src": ""
+                },
+                "img_background": {
+                    "id": "",
+                    "src": ""
+                }
+            },
+            "episodes": [
+                {
+                    "id": "ep-adl-01",
+                    "season": 1,
+                    "number": 1,
+                    "slug": "foco-inicial",
+                    "title": "Foco Inicial",
+                    "description": "O primeiro clique na cidade velha.",
+                    "language": "pt-BR",
+                    "images": [
+                        {
+                            "id": "img-page-01",
+                            "src": "/assets/works/lente/img-01.png"
+                        }
+                    ],
+                    "publishedAt": "2026-08-01",
+                    "status": true
+                },
+                {
+                    "id": "ep-adl-02",
+                    "season": 1,
+                    "number": 2,
+                    "slug": "luz-natural",
+                    "title": "Luz Natural",
+                    "description": "A caça ao melhor ângulo da tarde.",
+                    "language": "pt-BR",
+                    "images": [],
+                    "publishedAt": "",
+                    "status": false
+                }
+            ],
+            "status": "ongoing",
+            "releaseDate": "2026-08-01"
+        }
+    ]
+}

@@ -1,16 +1,16 @@
 .btn {
     border-radius: var(--space-12);
 
-    &.btn--sm {
+    &.btn--sm, &.btn-icon--sm {
         border-radius: var(--space-8);
 
     }
 
-    &.btn--lg {
+    &.btn--lg, &.btn-icon--lg {
         border-radius: var(--space-16);
     }
 
-    &.btn--xl {
+    &.btn--xl, &.btn-icon--xl {
         border-radius: var(--space-20);
     }
 
@@ -40,6 +40,16 @@
 
 .boder-radius_content, .dropdown-menu{
     border-radius: var(--space-16);
+}
+
+
+.content_container,
+.form,
+.tabs__panel,
+.container_table-style,
+.fluid-container_item {
+    /* border-radius: var(--space-16); */
+    /* background-color: #000!important; */
 }
 
 .form_input {

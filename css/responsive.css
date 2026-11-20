@@ -3,27 +3,35 @@
     :root {
         --container-pad: var(--space-40);
         --w-sec_cont: 85%;
+        --wid-content: 50vw;
     }
 
-    .tabs__item {
+    .section_container,
+    .footer_container {
+        /* width: 85%; */
+        /* max-width: 1200px; */
+    }
+
+    .tabs_item {
         flex-grow: 0;
     }
 
     .slide_container-card .slide_content-card {
         scrollbar-width: thin;
     }
-    .slide_container-card .slide_content-card .card{
+
+    .slide_container-card .slide_content-card .card {
         margin-bottom: 50px;
     }
-    
+
 
     .footer_website-seal {
-        width: 30%;
+        /* width: 30%; */
         /* background-color: yellow; */
     }
 
     .footer_omsiq-seal {
-        width: 85%;
+        /* width: 85%; */
     }
 
     .footer_brand-seal {
@@ -71,15 +79,39 @@
 /* Para Tela de Celulares */
 @media screen and (max-width: 768px) {
 
-    .fluid-container {
-        flex-direction: column;
-        gap: var(--space-32);
+    .in-nav_favicon-title {
+        width: 190px;
+        /* background-color: yellow; */
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
 
-    .img-leitor-online {
-        width: 100% !important;
+
+    .section_container {
+        /* background-color: red; */
+    }
+
+    .fluid-container {
+        flex-direction: column;
+        /* gap: var(--space-32); */
+    }
+
+    .section_leitor-online {
+        /* background-color: red; */
+    }
+
+    .container_leitor-online {
+
+        &>* {
+            /* width: 100% !important; */
+        }
+
         /* margin: 0 10px; */
         /* border: solid 2px red; */
 
+    }
+
+    .fluid-container_pg-title {
+        gap: var(--space-60);
     }
 }

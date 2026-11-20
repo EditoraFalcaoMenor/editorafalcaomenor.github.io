@@ -1,0 +1,192 @@
+/* Grade de obras */
+.works-grid {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* grid-template-columns: repeat(5, minmax(0, 1fr)); */
+    /* gap: 24px; */
+    /* background-color: yellow; */
+    background-color: var(--surface-1);
+}
+
+.works-grid-titles {
+
+    display: grid;
+    /* flex-direction: column; */
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    /* background-color: yellow; */
+    background-color: var(--surface-1);
+    padding: var(--container-pad);
+    min-height: 500px;
+
+    &>* {
+        /* opacity: 0.6; */
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+/* Card */
+.work-card {
+    display: flex;
+    /* min-width: 0; */
+    width: 100%;
+    max-width: 260px;
+    /* background-color: greenyellow; */
+    box-sizing: border-box;
+    padding: 0;
+
+    @media (min-width: 768px) {
+        max-width: 600px;
+
+    }
+}
+
+.work-card--titles {
+    display: flex;
+    flex-direction: column;
+    /* min-width: 0; */
+    /* width: 100%; */
+    /* max-width: 260px; */
+    /* background-color: greenyellow; */
+    /* box-sizing: border-box; */
+    padding: 0;
+    /* background-color: red; */
+
+    /* @media (min-width: 768px) {
+        max-width: 600px;} */
+
+}
+
+.work-card_link {
+    /* display: block; */
+    display: flex;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    gap: var(--space-12);
+    /* background-color: aqua; */
+
+}
+
+.work-card_link--titles {
+    /* display: block; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: inherit;
+    text-decoration: none;
+    /* gap: var(--space-4); */
+    /* background-color: aqua; */
+
+}
+
+/* Capa */
+.work-card_cover {
+    display: block;
+    width: 100%;
+    /* aspect-ratio: 2 / 3; */
+    object-fit: cover;
+}
+
+/* Título com reticências */
+.work-card_title {
+    margin-top: 10px;
+    overflow: hidden;
+    white-space: wrap;
+    /* text-overflow: ellipsis; */
+    /* background-color: red; */
+}
+
+.btn_my-list {
+    width: 44px;
+    height: 44px;
+    border-radius: 500px;
+    padding: 0;
+    margin: 0;
+
+}
+
+/* Filtros */
+.genre-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    width: 100%;
+}
+
+.genre-filter {
+    cursor: pointer;
+}
+
+.genre-filter.ativo {
+    /* font-weight: bold; */
+}
+
+/* Lista de obras salvas */
+.my-list_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.my-list_item:not(:last-child) {
+    border-bottom: solid 1px black;
+}
+
+.my-list_item .work-card_cover {
+    width: 100px;
+    /* flex-shrink: 0; */
+}
+
+/* Responsividade */
+/* @media (max-width: 900px) {
+    .works-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .works-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+} */
+
+.my-list_item .work-card {
+    /* flex: 1; */
+    /* background-color: plum; */
+}
+
+.my-list_item button {
+    /* flex-shrink: 0; */
+    /* background-color: plum; */
+}
+
+.genre-filter {
+    color: var(--text-default);
+    font-size: var(--font-size-md);
+    padding: var(--btn-pad-md);
+    border: solid 1px var(--btn-border-outlined);
+    /* background-color: var(--btn-color-tonal); */
+    border-radius: var(--space-8);
+    background: transparent;
+    transition: border-radius 200ms ease-in;
+}
+
+.genre-filter.ativo {
+    background-color: var(--btn-color-tonal);
+    border: solid 1px var(--btn-color-tonal);
+    /* background: var(--color-primary); */
+    /* color: white; */
+    border-radius: 200px;
+}

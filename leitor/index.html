@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leitor Livro Arte, vol. 1</title>
+
+    <script src="../js/theme.js"></script>
+
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script src="../js/script.js" defer></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            /* background: #171717; */
+            /* color: white; */
+            /* font-family: Arial, sans-serif; */
+        }
+
+
+        #reader {
+            width: 100%;
+            max-width: 700px !important;
+            margin: auto;
+        }
+
+        #reader img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        #reader .reader-page {
+            margin: 0;
+        }
+
+        .reader-page img {
+            display: block;
+        }
+
+        /* Container fixo no topo da página */
+        .reading-progress-container {
+            /* position: fixed; */
+            /* top: 0; */
+            /* left: 0; */
+            /* align-content: center; */
+            width: 100%;
+            max-width: 30rem;
+            height: auto;
+            /* Espessura da linha */
+            background: #ffffff39;
+            background-color: var(--surface-1);
+            backdrop-filter: blur(var(--space-40));
+            z-index: 9999;
+            /* Garante que fique acima de tudo */
+            /* padding: 10px; */
+            border-radius: 300px;
+            overflow: hidden;
+            display: none;
+        }
+
+        /* A barra que vai preenchendo */
+        .reading-progress-bar {
+            height: 6px;
+            width: 0%;
+            /* background: var(--color-secondary); */
+            background-color: var(--color-white);
+            /* Cor da barra (ex: azul) */
+            transition: width 0.1s ease-out;
+            /* Suaviza o movimento */
+            /* border: 2px solid white; */
+            border-radius: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav nav--stati nav--stick nav-for-scroll">
+        <div class="nav_container">
+
+            <div class="in-nav_group">
+                <div class="in-nav_favicon">
+                    <a href="javascript:history.back()" class="btn btn-icon--md">
+                        <img src="../../assets/icon-dark/arrow_back.svg" alt="" class="btn_svg">
+                    </a>
+                    <div class="in-nav_favicon-title">
+                        <h1 class="episode-title typo-body--lg"></h1>
+                        <p class="work-title typo-body--lg"></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Barra de progresso de leitura -->
+            <div class="reading-progress-container">
+                <div class="reading-progress-bar" id="progressBar"></div>
+            </div>
+
+            <!-- Dropdown 2 -->
+            <div class="dropdown">
+                <button class="btn btn-icon--md" data-dropdown-toggle="menu-opcoes" aria-expanded="false"
+                    aria-controls="menu-opcoes" aria-label="Mais opções">
+                    <img src="/assets/icon-dark/settings.svg" alt="" class="btn_svg">
+                </button>
+
+                <ul class="dropdown-menu" id="menu-opcoes" data-dropdown-menu>
+                    <li class="dropdown-menu_item">
+                        <button type="button" data-theme-toggle>🖥️ Sistema</button>
+                    </li>
+                    <li class="dropdown-menu_item">
+                        <button id="debug-btn">Ativar Modo Debug</button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <section class="section_leitor-online" aria-label="Conteúdo do episódio">
+        <div class="container_leitor-online ">
+            <!-- As páginas serão inseridas aqui -->
+            <span id="reader"></span>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section_container">
+
+            <div class="work-details">
+                <p class="work-title">Carregando...</p>
+                <p class="episode-title"></p>
+                <p class="published-at"></p>
+            </div>
+
+
+            <div class="container_btn">
+                <div id="reader-navigation"></div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+    <script>
+        // 1. Carregar obra e episódio
+        async function loadReader() {
+            const params = new URLSearchParams(window.location.search);
+
+            const workSlug = params.get("work");
+            const episodeSlug = params.get("episode");
+
+            try {
+                const response = await fetch("/json/works.json");
+
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP: ${response.status}`);
+                }
+
+                const content = await response.json();
+
+                // Buscar obra
+                const work = content.works.find(
+                    item => item.slug === workSlug
+                );
+
+                if (!work) {
+                    throw new Error(`Obra não encontrada: ${workSlug}`);
+                }
+
+                // Buscar episódio
+                const episode = work.episodes.find(
+                    item => item.slug === episodeSlug
+                );
+
+                if (!episode) {
+                    throw new Error(`Episódio não encontrado: ${episodeSlug}`);
+                }
+
+                // Renderizar conteúdo
+                renderReader(work, episode);
+
+            } catch (error) {
+                console.error("Erro ao carregar leitor:", error);
+
+                // Mensagens de erro
+                document.querySelectorAll(".work-title").forEach(element => {
+                    element.textContent = "Não foi possível carregar a obra.";
+                });
+
+                document.querySelectorAll(".episode-title, .published-at").forEach(element => {
+                    element.textContent = "";
+                });
+
+                const reader = document.querySelector("#reader");
+                const navigation = document.querySelector("#reader-navigation");
+
+                if (reader) reader.textContent = "";
+                if (navigation) navigation.textContent = "";
+            }
+        }
+
+
+        // 2. Renderizar navegação entre episódios
+        function renderNavigation(work, episode) {
+            const navigation = document.querySelector("#reader-navigation");
+
+            if (!navigation) {
+                console.error("Elemento #reader-navigation não encontrado.");
+                return;
+            }
+
+            // Organizar episódios por temporada e número
+            const episodes = [...work.episodes].sort((a, b) => {
+                return a.season - b.season || a.number - b.number;
+            });
+
+            // Encontrar o episódio atual
+            const currentIndex = episodes.findIndex(
+                item => item.slug === episode.slug
+            );
+
+            // Verificar se existe próximo episódio
+            const nextEpisode = episodes[currentIndex + 1];
+
+            // Verificar se o próximo episódio está disponível
+            const hasNext = nextEpisode && nextEpisode.status === true;
+
+            // Criar container dos botões
+            const container = document.createElement("div");
+            container.className = "container_btn";
+
+            // Botão Sair
+            const exitContainer = document.createElement("div");
+
+            exitContainer.className =
+                `container_btn-items ${hasNext ? "grow-1" : "grow-2"}`;
+
+            const exitLink = document.createElement("a");
+
+            exitLink.className = hasNext
+                ? "btn btn--md btn--full btn--tonal"
+                : "btn btn--lg btn--full btn--filled";
+
+            exitLink.textContent = "Sair";
+            exitLink.href = "javascript:history.back()";
+
+            exitContainer.appendChild(exitLink);
+            container.appendChild(exitContainer);
+
+            // Botão Próximo (somente para obras com mais de um episódio)
+            if (episodes.length > 1) {
+                const nextContainer = document.createElement("div");
+
+                nextContainer.className =
+                    `container_btn-items ${hasNext ? "grow-2" : "grow-1"}`;
+
+                const nextLink = document.createElement("a");
+
+                if (hasNext) {
+                    const query = new URLSearchParams({
+                        work: work.slug,
+                        episode: nextEpisode.slug
+                    });
+
+                    nextLink.className = "btn btn--lg btn--full btn--filled";
+                    nextLink.href = `/leitor/index.html?${query}`;
+                } else {
+                    nextLink.className = "btn btn--md btn--full btn--disabled";
+                    nextLink.setAttribute("aria-disabled", "true");
+                }
+
+                nextLink.textContent = "Próximo";
+
+                nextContainer.appendChild(nextLink);
+                container.appendChild(nextContainer);
+            }
+
+            // Botão voltar ao topo
+            const topContainer = document.createElement("div");
+            topContainer.className = "container_btn-items grow-0";
+
+            const topButton = document.createElement("button");
+            topButton.type = "button";
+            topButton.className =
+                "footer_btnVoltarTopo btn btn-icon--md btn--outlined";
+
+            const icon = document.createElement("img");
+            icon.src = "../assets/icon-dark/arrow_upward.svg";
+            icon.alt = "";
+            icon.className = "btn_svg";
+
+            topButton.appendChild(icon);
+
+            topButton.addEventListener("click", () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            });
+
+            topContainer.appendChild(topButton);
+            container.appendChild(topContainer);
+
+            // Inserir os botões na página
+            navigation.replaceChildren(container);
+        }
+
+
+        // 3. Renderizar informações e páginas
+        function renderReader(work, episode) {
+
+            // Elementos da página
+            const reader = document.querySelector("#reader");
+
+            // Informações da obra
+            document.querySelectorAll(".work-title").forEach(element => {
+                element.textContent = work.title;
+            });
+
+            // Informações do episódio
+            document.querySelectorAll(".episode-title").forEach(element => {
+                element.textContent =
+                    `T${episode.season}:E${episode.number} — ${episode.title}`;
+            });
+
+            // Data de publicação
+            const date = new Date(episode.publishedAt + "T00:00:00");
+
+            document.querySelectorAll(".published-at").forEach(element => {
+                element.textContent = date.toLocaleDateString("pt-BR");
+            });
+
+            // Renderizar navegação
+            renderNavigation(work, episode);
+
+            // Limpar leitor
+            reader.innerHTML = "";
+
+            // Verificar se existem imagens
+            if (!episode.images || episode.images.length === 0) {
+                reader.textContent =
+                    "Este episódio ainda não possui páginas.";
+                return;
+            }
+
+            // Criar páginas do episódio
+            episode.images.forEach((image, index) => {
+
+                const figure = document.createElement("figure");
+                figure.className = "reader-page";
+
+                const img = document.createElement("img");
+
+                img.src = image.src;
+                img.alt = `Página ${index + 1} de ${episode.title}`;
+                img.loading = index === 0 ? "eager" : "lazy";
+                img.decoding = "async";
+
+                figure.appendChild(img);
+                reader.appendChild(figure);
+
+            });
+        }
+
+
+        // 4. Iniciar leitor
+        loadReader();
+
+    </script>
+
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+    </script>
+
+</body>
+
+</html>

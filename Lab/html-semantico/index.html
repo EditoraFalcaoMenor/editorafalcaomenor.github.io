@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Descrição do seu site.">
+
+    <title>Meu Site</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+
+
+    <style>
+        /* Configurações gerais */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background-color: #f4f4f4;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Cabeçalho */
+        body>header {
+            padding: 20px;
+            background-color: #222;
+            color: white;
+        }
+
+        body>header h1 {
+            margin: 10px 0;
+        }
+
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 0;
+            list-style: none;
+        }
+
+        body>header a {
+            color: white;
+        }
+
+        /* Layout principal */
+        .page-layout {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            /* max-width: 1200px; */
+            margin: 24px auto;
+            padding: 0 20px;
+            background-color: red;
+        }
+
+        main {
+            flex: 1;
+            min-width: 0;
+            padding: 24px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .aside {
+            width: 320px;
+            flex-shrink: 0;
+            padding: 20px;
+            background-color: #e5e7eb;
+            border-radius: 8px;
+        }
+
+        section {
+            margin-bottom: 24px;
+        }
+
+        article {
+            margin-bottom: 20px;
+            padding: 16px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+
+        article h4 {
+            margin-top: 0;
+        }
+
+        /* Rodapé */
+        body>footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #222;
+            color: white;
+        }
+
+        body>footer a {
+            margin: 0 8px;
+            color: white;
+        }
+
+        /* Responsividade */
+        @media (max-width: 700px) {
+            .page-layout {
+                flex-direction: column;
+            }
+
+            main,
+            .aside {
+                width: 100%;
+            }
+
+            nav ul {
+                gap: 10px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Cabeçalho principal -->
+    <header>
+        <a href="/" aria-label="Página inicial">
+            <img src="img/logo.svg" alt="Logo do site">
+        </a>
+
+        <h1>Nome do Site</h1>
+
+        <!-- Navegação principal -->
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="/projetos">Projetos</a></li>
+                <li><a href="/contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal e conteúdo complementar -->
+    <div class="page-layout">
+
+        <!-- Conteúdo complementar -->
+        <aside aria-label="Informações complementares" class="aside">
+            <section>
+                <h2>Sobre o autor</h2>
+                <p>Uma breve apresentação.</p>
+            </section>
+
+            <nav aria-label="Links relacionados">
+                <h2>Links úteis</h2>
+                <ul>
+                    <li><a href="/arquivo">Arquivo</a></li>
+                    <li><a href="/categorias">Categorias</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="conteudo">
+            <h2>Conteúdo principal</h2>
+
+            <!-- Seção de apresentação -->
+            <section aria-labelledby="apresentacao">
+                <h3 id="apresentacao">Apresentação</h3>
+                <p>
+                    Apresente aqui o objetivo desta página.
+                </p>
+            </section>
+
+            <!-- Seção de conteúdo -->
+            <section aria-labelledby="conteudos">
+                <h3 id="conteudos">Conteúdos recentes</h3>
+
+                <!-- Artigo independente -->
+                <article>
+                    <header>
+                        <h4>Título do artigo</h4>
+                        <p>
+                            Publicado em
+                            <time datetime="2026-10-23">
+                                23 de outubro de 2026
+                            </time>
+                        </p>
+                    </header>
+
+                    <p>
+                        Escreva aqui o conteúdo do artigo.
+                    </p>
+
+                    <footer>
+                        <a href="/artigos/artigo-1">
+                            Ler artigo completo
+                        </a>
+                    </footer>
+                </article>
+
+                <article>
+                    <h4>Outro artigo</h4>
+                    <p>
+                        Adicione outros conteúdos independentes.
+                    </p>
+                </article>
+            </section>
+        </main>
+ 
+        <!-- <div class="aside"></div> -->
+
+    </div>
+
+    <!-- Rodapé geral -->
+    <footer>
+        <p>
+            &copy; 2026 Meu Site. Todos os direitos reservados.
+        </p>
+
+        <nav aria-label="Navegação do rodapé">
+            <a href="/privacidade">Privacidade</a>
+            <a href="/termos">Termos de uso</a>
+        </nav>
+    </footer>
+</body>
+
+</html>

@@ -7,45 +7,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editora Falcão Menor</title>
+    <title>HOME</title>
 
     <script src="js/theme.js"></script>
 
     <link rel="canonical" href="https://mrzzo.github.io/pth/f/msq">
     <meta name="share-text" content="Veja esse Folder: ">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Path:\Marlon Siqueira">
-    <meta property="og:description" content="Organização de links e caminhos digitais">
-    <meta property="og:image" content="https://mrzzo.github.io/pth/images/preview-link.webp">
-    <meta property="og:url" content="https://mrzzo.github.io/pth/">
-    <meta property="og:type" content="website">
-
-    <meta name="twitter:card" content="summary_large_image">
-
-    <meta name="theme-color" content="#ffffff" id="theme-color-meta">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-
     <link rel="stylesheet" href="css/main.css">
 
 
     <script src="js/script.js" defer></script>
+
+    <script src="js/library.js" defer></script>
+    <script src="js/home.js" defer></script>
 
     <link rel="shortcut icon" href="assets/favicon/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/efm-favicon-32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon/efm-favicon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon/efm-favicon-512.png">
     <link rel="apple-touch-icon" href="assets/favicon/efm-favicon-180.png" sizes="180x180">
+
+    <style>
+    </style>
 </head>
 
 <body>
 
-    <nav class="nav">
+
+    <nav class="nav nav_home" data-scroll-class="nav_home--scrolled" data-scroll-threshold="1">
         <div class="nav_container">
 
             <div class="in-nav_group">
@@ -55,31 +45,60 @@
 
                 <div class="in-nav_favicon">
 
-                    <img src="assets/favicon/efm-favicon-512--reverse.png" class="in-nav_favicon-img" alt="">
-                    <p class="in-nav_favicon-title">Início</p>
+                    <img src="assets/favicon/efm-favicon-180.png" class="in-nav_favicon-img" alt="">
+                    <p class="in-nav_favicon-title">Editora Falcão Menor</p>
                     <!-- <h3 class="navbar_back-title">Home</h3> -->
                 </div>
             </div>
 
+            <div class="in-nav_link-group">
+                <ul class="link-group_ul">
+                    <li class="link-group_li"><a href="#" class="a">início</a></li>
+                    <li class="link-group_li"><a href="titles/index.html" class="a">títulos</a></li>
+                    <li class="link-group_li"><a href="my-list/index.html" class="a">minha lista</a></li>
+                    <li class="link-group_li"><a href="blog/index.html" class="a">blog</a></li>
+                </ul>
+
+            </div>
+
             <div class="in-nav_group">
+                <!-- <a href="" class="btn btn-icon--md">
+                    <img src="assets/icon-dark/settings.svg" alt="" class="btn_svg">
+                </a> -->
+                <div class="in-nav_group">
 
-                <!-- <a href="" class="btn btn--md">
-                    <img src="assets/icon-dark/search.svg" alt="">
-                    Acessar</a> -->
+                    <!-- Dropdown 2 -->
+                    <div class="dropdown">
+                        <button class="btn btn-icon--md" data-dropdown-toggle="menu-opcoes" aria-expanded="false"
+                            aria-controls="menu-opcoes" aria-label="Mais opções">
+                            <img src="assets/icon-dark/settings.svg" alt="" class="btn_svg">
+                        </button>
 
-                <!-- Menu Dropdown -->
-                <div class="dropdown">
-                    <button class="btn btn-icon--md" data-dropdown-toggle aria-label="Abrir menu">
-                        <img src="assets/icon-dark/settings.svg" alt="" class="btn_svg">
-                    </button>
-                    <ul class="dropdown-menu" data-dropdown-menu>
-                        <li class="dropdown-menu_item">
-                            <button type="button" data-theme-toggle>🖥️ Sistema</button>
-                        </li>
-                        <li class="dropdown-menu_item">
-                            <button id="debug-btn">Ativar Modo Debug</button>
-                        </li>
-                    </ul>
+                        <ul class="dropdown-menu" id="menu-opcoes" data-dropdown-menu>
+                            <li class="dropdown-menu_item">
+                                <button type="button" data-theme-toggle>🖥️ Sistema</button>
+                            </li>
+                            <li class="dropdown-menu_item">
+                                <button id="debug-btn">Ativar Modo Debug</button>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Dropdown 1 -->
+                    <div class="dropdown">
+                        <button class="btn btn-icon--md" data-dropdown-toggle="menu-usuario" aria-expanded="false"
+                            aria-controls="menu-usuario" aria-label="Menu do usuário">
+                            <img src="assets/icon-dark/menu.svg" alt="" class="btn_svg">
+                        </button>
+
+                        <ul class="dropdown-menu" id="menu-usuario" data-dropdown-menu>
+                            <li class="dropdown-menu_item"><a href="#" class="a">início</a></li>
+                            <li class="dropdown-menu_item"><a href="titles/index.html" class="a">títulos</a></li>
+                            <li class="dropdown-menu_item"><a href="my-list/index.html" class="a">minha lista</a></li>
+                            <li class="dropdown-menu_item"><a href="blog/index.html" class="a">blog</a></li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
             <!-- <div class="in-nav--end">
@@ -92,129 +111,237 @@
         </div>
     </nav>
 
-    <section class="section-hero">
 
-        <div class="section-hero_container">
-            <!-- <div class="section_container"><img src="assets/logo-efm-vertical.svg" alt="" class="logo-efm"></div> -->
-            <h1 class="h1">
-                Hello World!
-            </h1>
-            <p>Editora Falcão Menor</p>
+    <section class="hero">
+
+        <div class="section_content">
+            <div class="hero_container hero_container--efm">
+                <h1 class="typo-display--sm">início</h1>
+            </div>
+            <div class="hero_sub">
+                <p class="typo-title--sm">Bem-vindo(a) à editora Falcão Menor, uma pequena editora com foco em
+                    lançamentos de obras digitais.</p>
+            </div>
         </div>
-
 
         <!-- <div class="section-hero_bg"></div> -->
     </section>
 
 
-    <!-- <section class="section">
-        <div class="section_container"><img src="assets/logo-efm-horizontal.svg" alt="" class="logo-efm"></div>
-    </section> -->
-
-
     <section class="section">
-
-        <div class="section_container container_title">
-            <h2>Obras disponíveis</h2>
+        <div class="section_container">
+            <div class="container_title">
+                <h2 class="typo-title--md">Principais obras</h2>
+            </div>
         </div>
 
-        <div class="section_card-produto" id="meu-scroll">
+        <div class=" slide_container-card" name="produto_efm">
+            <div class="slide_content-card " id="meu-scroll">
+                <!-- <div class="card-ghost"></div> -->
 
-            <div class="card_produto">
-                <img src="assets/webtoon/cover/cover-livro-arte-vol-1--xl.png" alt="" class="card_produto-img">
-                <p>Livro Arte (vol.1): Ainda Estou Aqui</p>
-                <a href="title/119498/" class="btn btn--full btn--md btn--tonal">Acessar</a>
-                <p class="card-counter">1/5</p>
+                <div class="card">
+                    <a>
+                        <div class="card-img-pre-load"></div>
+                        <p class="title-pre-load"><span>Título</span></p>
+                        <p class="card-counter-pre-load"><span>1/5</span></p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a>
+                        <div class="card-img-pre-load"></div>
+                        <p class="title-pre-load"><span>Título</span></p>
+                        <p class="card-counter-pre-load"><span>2/5</span></p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a>
+                        <div class="card-img-pre-load"></div>
+                        <p class="title-pre-load"><span>Título</span></p>
+                        <p class="card-counter-pre-load"><span>3/5</span></p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a>
+                        <div class="card-img-pre-load"></div>
+                        <p class="title-pre-load"><span>Título</span></p>
+                        <p class="card-counter-pre-load"><span>4/5</span></p>
+                    </a>
+                </div>
+                <div class="card">
+                    <a>
+                        <div class="card-img-pre-load"></div>
+                        <p class="title-pre-load"><span>Título</span></p>
+                        <p class="card-counter-pre-load"><span>5/5</span></p>
+                    </a>
+                </div>
+
+                <!-- <div class="card-ghost"></div> -->
             </div>
-
-            <div class="card_produto">
-                <img src="assets/webtoon/cover/cover-efm-base--xl.png" alt="" class="card_produto-img">
-                <p>URSO</p>
-                <a href="title/809425/" class="btn btn--full btn--md btn--tonal">Acessar</a>
-                <p class="card-counter">2/5</p>
-            </div>
-
-            <div class="card_produto">
-                <img src="assets/webtoon/cover/cover-encontros--xl.png" alt="" class="card_produto-img">
-                <p>ENCONTROS</p>
-                <a href="title/418732/" class="btn btn--full btn--md btn--tonal">Acessar</a>
-                <p class="card-counter">3/5</p>
-            </div>
-
-            <div class="card_produto">
-                <img src="assets/webtoon/cover/cover-ferretto--xl.png" alt="" class="card_produto-img">
-                <p>Ferretto</p>
-                <a href="title/710469/" class="btn btn--full btn--md btn--tonal">Acessar</a>
-                <p class="card-counter">4/5</p>
-            </div>
-
-            <div class="card_produto">
-                <img src="assets/webtoon/cover/cover-efm-base--xl.png" alt="" class="card_produto-img">
-                <p>Planner 2026</p>
-                <a href="title/583104/" class="btn btn--full btn--md btn--tonal">Acessar</a>
-                <p class="card-counter">5/5</p>
-            </div>
-
-
         </div>
     </section>
 
+    <!-- <section class="hero">
+
+        <div class="hero_container">
+            <h1 class="typo-display--lg">
+                Novas proteções do Android para ajudar
+            </h1>
+            <h1 class="typo-display--md">
+                Novas proteções do Android para ajudar
+            </h1>
+            <h1 class="typo-display--sm">
+                Novas proteções do Android para ajudar
+            </h1>
+            <br>
+            <h1 class="typo-headline--lg">
+                Novas proteções do Android para ajudar
+            </h1>
+            <h1 class="typo-headline--md">
+                Novas proteções do Android para ajudar
+            </h1>
+            <h1 class="typo-headline--sm">
+                Novas proteções do Android para ajudar
+            </h1>
+            <br>
+
+
+            <h1 class="typo-title--lg">
+                Novas proteções do Android para ajudar
+            </h1>
+            <h1 class="typo-title--md">
+                Novas proteções do Android para ajudar
+            </h1>
+            <h1 class="typo-title--sm">
+                Novas proteções do Android para ajudar
+            </h1>
+            <br>
+
+
+
+            <h1 class="typo-body--lg">
+                lg Novas proteções do Android para ajudar
+            </h1>
+            <h1 class="typo-body--md">
+                md Novas proteções do Android para ajudar
+            </h1>
+            <h1 class="typo-body--sm">
+                sm Novas proteções do Android para ajudar
+            </h1>
+        </div>
+        <div class="hero_sub">
+            <p>À medida que os golpistas se tornam mais sofisticados, o Android está usando o melhor da IA ​​do Google
+                para manter você seguro em chamadas, mensagens de texto e aplicativos de bate-papo.</p>
+        </div>
+
+    </section> -->
 
     <section class="section">
         <div class="section_container">
 
-            <h2 class="container_title">Fique por dentro de novos lançamentos</h2>
+            <div class="section_content">
+                <!-- <h2 class="container_title">Fique por dentro de novos lançamentos</h2> -->
+                <div class="container_title">
+                    <h2 class="typo-title--md">Fique por dentro de novos lançamentos</h2>
+                </div>
+                <form action="" method="get" class="form" id="form">
 
-            <form action="" method="get" class="form boder-radius_content">
-                <div class="form_field">
-                    <label for="iname">Nome completo</label>
-                    <input class="form_input" type="text" name="name" id="iname" required autocomplete="name">
-                </div>
-                <div class="form_field">
-                    <label for="ibday">Data de Nascimento</label>
-                    <input type="date" name="bday" id="ibday" required autocomplete="bday" class="form_input">
-                </div>
-                <div class="form_field">
-                    <label for="iemail">Seu melhor email</label>
-                    <input class="form_input" type="email" name="email" id="iemail" required autocomplete="email">
-                </div>
-                <input type="submit" value="Enviar" class="btn btn--full btn--md btn--tonal">
-                <input type="reset" value="Reiniciar" class="btn btn--full btn--md btn--text">
-            </form>
+                    <div class="form_field">
+                        <label for="iname">Nome completo</label>
+                        <input class="form_input" type="text" name="name" id="iname" required autocomplete="name">
+                    </div>
+
+                    <div class="form_field">
+                        <label for="ibday">Data de Nascimento</label>
+                        <input type="date" name="bday" id="ibday" required autocomplete="bday" class="form_input">
+                    </div>
+
+                    <div class="form_field">
+                        <label for="iemail">Seu melhor email</label>
+                        <input class="form_input" type="email" name="email" id="iemail" required autocomplete="email">
+                    </div>
+
+                    <div id="message"></div>
+
+                    <div class="container_btn">
+                        <div class="container_btn-items grow-2">
+                            <input type="submit" value="Enviar" class="btn btn--full btn--md btn--tonal">
+                        </div>
+
+                        <div class="container_btn-items grow-1">
+                            <input type="reset" value="Reiniciar" class="btn btn--full btn--md btn--text">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="section_container footer_container">
 
-            <p>Editora Falcão Menor &copy;
-                <script>document.write(new Date().getFullYear())</script> - 2026, todos direitos reservados
-            </p>
 
-            <div class="footer_brand-seal">
-                <img src="assets/Vector.svg" class="footer_website-seal">
-                <div class="seal_links">
-                    <a href="https://mrzzo.github.io/pth/f/efm" target="_blank" class="btn btn--sm btn--outlined">
-                        <img src="https://mrzzo.github.io/pth/images/favicon-32.png" class="link-icon" alt="">
-                        <p>path/efm</p>
-                    </a>
-                </div>
+
+
+            <div class="footer_nav">
+                <ul>
+                    <li class="a"><a href="/" class="a">início</a></li>
+                    <li class="a"><a href="" class="a">títulos</a></li>
+                    <li class="a"><a href="" class="a">minha lista</a></li>
+                    <li class="a"><a href="" class="a">blog</a></li>
+                </ul>
+                </ul>
+                <!-- <ul>
+                    <li><a href="y.htm" class="a">página inicial</a></li>
+                    <li><a href="y.htm" class="a">Ilustrações</a></li>
+                    <li><a href="y.htm" class="a">Projetos</a></li>
+                    <li><a href="y.htm" class="a">página inicial</a></li>
+                    <li><a href="y.htm" class="a">Ilustrações</a></li>
+                    <li><a href="y.htm" class="a">Projetos</a></li>
+                </ul> -->
+
             </div>
 
             <hr class="footer_line">
 
-            <div class="footer_brand-seal">
-                <img src="assets/logo-v1-omarlonsiqueira.svg" class="footer_omsiq-seal">
-                <div class="seal_links">
-                    <a href="https://mrzzo.github.io/pth/f/msq" target="_blank" class="btn btn--sm btn--outlined">
-                        <img src="https://mrzzo.github.io/pth/images/favicon-32.png" class="link-icon" alt="">
-                        <p>path/efm</p>
-                    </a>
+            <div class="footer_brand-container">
+                <div class="footer_brand-content">
+                    <p>&copy;
+                        <script>document.write(new Date().getFullYear())</script> - 2026
+                    </p>
+                    <button id="btnVoltarTopo" class="footer_btnVoltarTopo btn btn--md btn--outlined">
+                        voltar ao topo
+                    </button>
                 </div>
+
+                <div class="footer_brand-content">
+                    <div class="footer_brand-seal">
+                        <!-- <img src="assets/Vector.svg" class="footer_website-seal"> -->
+                        <img src="/assets/logo-efm-horizontal.svg" class="footer_website-seal">
+                        <div class="seal_links">
+                            <a href="https://mrzzo.github.io/pth/f/efm" target="_blank"
+                                class="btn btn--sm btn--outlined">
+                                <img src="https://mrzzo.github.io/pth/images/favicon-32.png" class="link-icon" alt="">
+                                <p>path/efm</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer_brand-seal">
+                        <img src="/assets/logo-v1-omarlonsiqueira.svg" class="footer_omsiq-seal">
+                        <div class="seal_links">
+                            <a href="https://mrzzo.github.io/pth/f/msq" class="btn btn--sm btn--outlined">
+                                <img src="https://mrzzo.github.io/pth/images/favicon-32.png" class="link-icon" alt="">
+                                <p>path/msq</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
     </footer>
+
 </body>
 
 </html>

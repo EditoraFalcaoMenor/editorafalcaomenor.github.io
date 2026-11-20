@@ -1,0 +1,107 @@
+/* Sistema em dark, a menos que o usuário tenha forçado "light" */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+  /* IN */
+  --text-default: hsl(0, 0%, 100%);
+  --text-inverse: hsl(0, 0%, 0%);
+
+  --text-default-2nd: hsla(0, 0%, 90%);
+  --text-inverse-2nd: hsla(0, 0%, 0%);
+
+  --surface-0: hsl(0, 0%, 10%);
+  --surface-1: hsl(0, 0%, 100%, .05); /*container, card*/
+  --surface-2: hsl(0, 0%, 18%); /*btn, inputs, menu*/
+
+  --surface-0-09: hsla(0, 0%, 5%, 0.9); /* .nav */
+
+  --on-surface-1: hsl(0, 0%, 22%);
+
+  --color-white: hsl(0, 0%, 0%);
+  --color-black: hsl(0, 0%, 100%);
+
+  --color-gray-03: hsl(0, 0%, 97%);
+  --color-gray-05: hsl(0, 0%, 95%);
+  --color-gray-10: hsl(0, 0%, 90%);
+  --color-gray-20: hsl(0, 0%, 80%);
+  --color-gray-30: hsl(0, 0%, 70%);
+  --color-gray-40: hsl(0, 0%, 60%);
+  --color-gray-50: hsl(0, 0%, 50%);
+  --color-gray-60: hsl(0, 0%, 40%);
+  --color-gray-70: hsl(0, 0%, 30%);
+  --color-gray-75: hsl(0, 0%, 25%);
+  --color-gray-78: hsl(0, 0%, 22%);
+  --color-gray-80: hsl(0, 0%, 20%);
+  --color-gray-83: hsl(0, 0%, 17%);
+  --color-gray-85: hsl(0, 0%, 15%);
+  --color-gray-90: hsl(0, 0%, 10%);
+  --color-gray-95: hsl(0, 0%, 5%);
+  --color-gray-96: hsl(0, 0%, 4%);
+  --color-gray-97: hsl(0, 0%, 3%);
+  --color-gray-98: hsl(0, 0%, 2%);
+  --color-gray-99: hsl(0, 0%, 1%);
+
+  --color-green-90: rgb(204, 255, 207);
+  --color-orange: hsl(27, 100%, 55%);
+
+  /* FIM */
+  }
+}
+
+/* Dark forçado manualmente */
+:root[data-theme="dark"] {
+    color-scheme: dark;
+  /* IN */
+  --text-default: hsl(0, 0%, 100%);
+  --text-inverse: hsl(0, 0%, 0%);
+
+  --text-default-2nd: hsla(0, 0%, 90%);
+  --text-inverse-2nd: hsla(0, 0%, 0%);
+
+  --surface-0: hsl(0, 0%, 10%);
+  --surface-1: hsl(0, 0%, 100%, .05); /*container, card*/
+  --surface-2: hsl(0, 0%, 18%); /*btn, inputs, menu*/
+
+  --surface-0-09: hsla(0, 0%, 5%, 0.9); /* .nav */
+
+  --on-surface-1: hsl(0, 0%, 22%);
+
+  --color-white: hsl(0, 0%, 0%);
+  --color-black: hsl(0, 0%, 100%);
+
+  --color-gray-03: hsl(0, 0%, 97%);
+  --color-gray-05: hsl(0, 0%, 95%);
+  --color-gray-10: hsl(0, 0%, 90%);
+  --color-gray-20: hsl(0, 0%, 80%);
+  --color-gray-30: hsl(0, 0%, 70%);
+  --color-gray-40: hsl(0, 0%, 60%);
+  --color-gray-50: hsl(0, 0%, 50%);
+  --color-gray-60: hsl(0, 0%, 40%);
+  --color-gray-70: hsl(0, 0%, 30%);
+  --color-gray-75: hsl(0, 0%, 25%);
+  --color-gray-78: hsl(0, 0%, 22%);
+  --color-gray-80: hsl(0, 0%, 20%);
+  --color-gray-83: hsl(0, 0%, 17%);
+  --color-gray-85: hsl(0, 0%, 15%);
+  --color-gray-90: hsl(0, 0%, 10%);
+  --color-gray-95: hsl(0, 0%, 5%);
+  --color-gray-96: hsl(0, 0%, 4%);
+  --color-gray-97: hsl(0, 0%, 3%);
+  --color-gray-98: hsl(0, 0%, 2%);
+  --color-gray-99: hsl(0, 0%, 1%);
+
+  --color-green-90: rgb(204, 255, 207);
+  --color-orange: hsl(27, 100%, 55%);
+
+  /* FIM */
+
+}
+
+/* [data-theme="dark"] .btn_svg,
+[data-theme="dark"] .btn img{
+    filter: invert(1);
+}
+
+[data-theme="dark"] .footer_omsiq-seal{
+    filter: invert(1);
+} */

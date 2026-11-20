@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero {
+        position: relative;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: #ffffff;
+        /* Cor de fundo da página/seção */
+        overflow: hidden;
+        padding: 4rem 1.5rem;
+    }
+
+    /* Wrapper da Imagem com a Máscara em Degradê */
+    .hero__bg-wrapper {
+        position: absolute;
+        inset: 0;
+        /* Ocupa todo o espaço do .hero */
+        z-index: 1;
+
+        /* A máscara define onde a imagem é visível (black) e onde ela some (transparent) */
+        -webkit-mask-image: linear-gradient(to bottom, hsl(0, 0%, 0%) 0%, rgba(0, 0, 0, 0) 95%);
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 95%);
+    }
+
+    .hero__bg-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        filter: blur(10px);
+        transform: scale(1.1);
+    }
+
+    /* Conteúdo sobreposto */
+    .hero__content {
+        position: relative;
+        z-index: 2;
+        /* Garante que o texto fique acima da imagem */
+        max-width: 720px;
+        color: #ffffff;
+    }
+
+    /* A div assume a cor desejada (cor sólida ou gradiente) */
+    .hero__bg-color {
+        width: 100%;
+        height: 100%;
+
+        /* Pode ser uma cor primária do seu Design System */
+        background-color: var(--color-primary, #4A5DFF);
+
+        /* Ou um gradiente colorido vibrante */
+        /* background: linear-gradient(135deg, #4A5DFF 0%, #00D2FF 100%); */
+    }
+</style>
+
+<body>
+    <header class="hero">
+        <!-- Container para controlar a imagem e a máscara -->
+        <div class="hero__bg-wrapper">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCt2OpVmqhSYQoSlWShi-fktZ7LwKTYpWEMOuD-Emj7UPc5WkOGB6oCV8&s=10" alt="" class="hero__bg-img" aria-hidden="true">
+            <!-- <div class="hero__bg-color"></div> -->
+        </div>
+
+        <!-- Conteúdo por cima -->
+        <div class="hero__content">
+            <h1>Título Impactante do Hero</h1>
+            <p>O Merfosis Pattern foi desenvolvido para criar interfaces modernas, escaláveis e acessíveis.</p>
+            <div class="hero__actions">
+                <a href="#" class="btn btn--md btn--primary">Começar agora</a>
+                <a href="#" class="btn btn--md">Saiba mais</a>
+            </div>
+        </div>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis dolor modi esse. Illo molestias eaque
+        corporis quia nulla incidunt quisquam impedit ducimus? Iure rem fugiat necessitatibus nisi ex enim incidunt.
+        Labore unde illum iste ipsum quos tempore nobis? Dicta, asperiores praesentium. Saepe eaque quia aspernatur.
+        Numquam aliquam veniam magnam minus pariatur totam amet dolor reiciendis? Cupiditate nulla eaque odit cum?
+        Enim, beatae doloribus! Veniam explicabo ab at, quisquam molestiae asperiores unde consectetur modi! Officiis
+        expedita natus consectetur repellendus dicta tempore perspiciatis ullam totam delectus? Odit, ad amet!
+        Temporibus, enim dignissimos. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus in optio provident
+        minus, modi numquam delectus accusantium obcaecati, voluptatibus tempora quas cumque consequuntur? Placeat
+        perferendis quo consectetur nihil, ab temporibus.
+        Asperiores optio esse labore reprehenderit nesciunt laudantium, voluptatibus totam dignissimos? Unde aliquid
+        iure, ratione in repellat esse tenetur sapiente voluptas ullam a aut, fugit architecto, hic quam quibusdam dicta
+        dolore!
+        Expedita amet aliquam iste, officia laudantium magni quam nobis omnis beatae natus quisquam ratione. Facere
+        magni a fugiat ex ipsa nulla non obcaecati veniam. Ipsa doloremque placeat vel id. Tempora!
+        Laborum fugit tempore similique magnam, impedit architecto iusto quas. Ipsam deleniti at, expedita quisquam,
+        exercitationem qui quaerat vel placeat provident et minus nisi fugiat odit fugit facere sint, aliquid
+        consequatur!
+        Eligendi error explicabo harum nostrum, sapiente nulla earum fuga, tempore quo nobis pariatur magni officia
+        animi fugit eaque sunt voluptas doloribus? Ducimus fugiat consectetur nisi dolorum delectus et molestiae
+        officiis?
+        Tempore, explicabo sapiente fugit vel porro odit culpa vitae, animi magnam in asperiores rerum quasi
+        exercitationem cupiditate? Amet eum cupiditate sapiente dolor itaque porro voluptatibus dicta expedita autem,
+        omnis quos!
+        Eligendi odio saepe rem exercitationem sunt dignissimos laborum ut facere at ipsam ex quos ratione expedita
+        obcaecati reiciendis quibusdam iusto vitae eos et debitis, iure libero atque quo aspernatur? Dolorem!
+        Magni odio, earum et voluptatem iure omnis minus, rerum dolor praesentium fuga at ipsum ratione quae debitis
+        eligendi quaerat eos eveniet, illum ducimus aspernatur molestiae nihil necessitatibus fugiat molestias. Qui.
+        Veniam impedit, veritatis quaerat accusantium sit delectus, corporis fuga soluta obcaecati doloribus officia?
+        Dignissimos molestiae dolor ex ipsam rerum eum a quas quia omnis obcaecati. Voluptates iste dolor numquam
+        corrupti!
+        Dolorem laborum magnam suscipit alias corporis nesciunt doloremque! Quam, sint. Unde mollitia sint ipsam vero
+        labore, expedita laudantium at cumque velit porro iste earum, fuga impedit laborum nostrum quo deserunt?</p>
+</body>
+
+</html>

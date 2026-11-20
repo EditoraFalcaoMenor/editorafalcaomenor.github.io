@@ -1,4 +1,7 @@
-:root {
+/* não estiliza nenhuma tag diretamente, apenas guarda os valores que você vai repetir em todo o projeto */
+/*  */
+
+:root, [data-theme="light"] {
   /* ================= PADDING ================= */
   /* --padding-5dvw: 18px;
   --padding_p: 2dvw;
@@ -19,7 +22,10 @@
   /* ============ TAMANHOS ============ */
   --w-nav_cont: 93vw;
   --w-sec_cont: 93vw;
-  --w-max_cont: 40rem;
+
+  --wid-container: 93vw;
+  --wid-container: 93vw;
+  --wid-content: 93vw;
 
   --size-auto: 100%;
   --size-full: 100%;
@@ -53,6 +59,25 @@
   --space-80: 80px;
 
   /* ================= TEXT SIZES ================= */
+
+  --typo-display--lg: 400 3.25rem/4rem 'open-sans-p', sans-serif;
+  --typo-display--md: 400 2.84rem/3.5rem 'open-sans-p', sans-serif;
+  --typo-display--sm: 400 2.65rem/3.1rem 'open-sans-p', sans-serif;
+
+  --typo-headline--lg: 400 2.2rem/2.8rem 'open-sans-p', sans-serif;
+  --typo-headline--md: 400 1.98rem/2.4rem 'open-sans-p', sans-serif;
+  --typo-headline--sm: 400 1.8rem/2.25rem 'open-sans-p', sans-serif;
+
+  --typo-title--lg: 400 1.6rem/2rem 'open-sans-p', sans-serif;
+  --typo-title--md: 400 1.37rem/1.75rem 'open-sans-p', sans-serif;
+  --typo-title--sm: 400 1.27rem/1.5rem 'open-sans-p', sans-serif;
+
+  --typo-body--lg: 400 1.08rem/1.5rem 'open-sans-p', sans-serif;
+  --typo-body--md: 400 1rem/1.5rem 'open-sans-p', sans-serif;
+  --typo-body--sm: 400 .95rem/1.5rem 'open-sans-p', sans-serif;
+
+
+  
   --font-size-xs: .75rem; /* por enquanto sem uso */
   --font-size-sm: .875rem;
   --font-size-md: 1rem;
@@ -77,12 +102,16 @@
   --text-default: hsl(0, 0%, 0%);
   --text-inverse: hsl(0, 0%, 100%);
   --text-default-2nd: hsla(0, 0%, 50%);
-  --text-inverse-2nd: hsla(0, 0%, 80%);
+  --text-inverse-2nd: hsla(0, 0%, 100%);
 
   --surface-0: hsl(0, 0%, 100%); /*fundo geral (body)*/
-  --surface-1: hsl(0, 0%, 95%); /*container, card*/
-  --surface-2: hsl(0, 0%, 83%); /*btn, inputs, menu*/
-  --surface-3: hsl(0, 0%, 80%); /**/
+  --surface-1: hsl(0, 0%, 0%, .05); /*container, card*/
+
+  --surface-1--solid: hsl(0, 0%, 95%); /*container, card*/
+  /* --surface-2: hsl(0, 83%, 49%);  */
+  /*btn, inputs, menu*/
+  /* --surface-3: hsl(0, 0%, 80%);  */
+  /**/
 
   --on-surface-1: hsl(0, 0%, 80%);
   --on-surface-2: hsl(0, 0%, 75%);
@@ -99,7 +128,7 @@
   --btn-color-default: #BDD1DB;
   --btn-color-filled: hsl(200, 55%, 38%);
   --btn-color-tonal: #A8D1E6;
-  --btn-color-outlined: transparent;
+  --btn-border-outlined: hsla(0, 0%, 0%, 0.15);
   --btn-color-text: transparent;
   --btn-color-disabled: var(--color-gray-96);
 

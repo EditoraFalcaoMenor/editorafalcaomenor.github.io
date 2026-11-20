@@ -30,7 +30,7 @@
 
 <body>
 
-    <nav class="nav nav--sticky">
+    <nav class="nav nav--sticky nav_efm-title" data-scroll-class="nav_efm-title--scrolled" data-scroll-threshold="540">
         <div class="nav_container">
 
             <div class="in-nav_group">
@@ -38,6 +38,7 @@
                     <a href="javascript:history.back()" class="btn btn-icon--md">
                         <img src="../../assets/icon-dark/arrow_back.svg" alt="" class="btn_svg">
                     </a>
+                    <!-- <p class="in-nav_favicon-title" name="title">Informações</p> -->
                     <p class="in-nav_favicon-title">Livro Arte, vol. 1</p>
                 </div>
             </div>
@@ -66,7 +67,7 @@
     </nav>
 
 
-    <section class="section">
+    <!-- <section class="section">
         <div class="section_container">
 
             <img src="../../assets/webtoon/frame-livro-arte-vol-1--xl.png" alt="" class="img pg-tittle_img">
@@ -88,28 +89,157 @@
                 saepe obcaecati molestiae distinctio?
             </p>
 
-            <div class="container_btn pg-title__container_btn">
-
-                <div class="container_btn-items btn-fixed-35rem">
-                    <a href="../../leitor/119498/" class="btn btn--xl btn--full btn--filled" aria-label="Ler agora o Comic Book de Livro Arte, volume 1: edição Ainda Estou Aqui (filme)">Ler agora</a>
+            <div class="pg-title__container_btn">
+                <div class="container_btn">
+                    <div class="container_btn-items btn-fixed-35rem">
+                        <a href="../../leitor/119498/" class="btn btn--xl btn--full btn--filled" aria-label="Ler agora o Comic Book de Livro Arte, volume 1: edição Ainda Estou Aqui (filme)">Ler agora</a>
+                    </div>
+                    <div class="container_btn-items btn-fixed-46">
+                        <a class="btn btn-icon--md btn--tonal">
+                            <img src="../../assets/icon-dark/favorite.svg" alt="" class="btn_svg">
+                        </a>
+                    </div>
+                    <div class="container_btn-items btn-fixed-46">
+                        <a class="btn btn-icon--md btn--tonal">
+                            <img src="../../assets/icon-dark/share.svg" alt="" class="btn_svg">
+                        </a>
+                    </div>
                 </div>
-                <div class="container_btn-items btn-fixed-46">
-                    <a class="btn btn-icon--md btn--tonal">
-                        <img src="../../assets/icon-dark/favorite.svg" alt="" class="btn_svg">
-                    </a>
-                </div>
-                <div class="container_btn-items btn-fixed-46">
-                    <a class="btn btn-icon--md btn--tonal">
-                        <img src="../../assets/icon-dark/share.svg" alt="" class="btn_svg">
-                    </a>
-                </div>
-
             </div>
 
         </div>
 
+    </section> -->
+
+    <section class="section content_container--transparent">
+        <div class="section_container">
+            <div class="fluid-container">
+                <div class="fluid-container_item  container_max-width boder-radius_content">
+                    <img src="../assets/frame-title-la-vol1.png" alt="" class="img">
+                    <h2>Livro Arte: Ainda Estou Aqui</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam molestias eos porro adipisci,
+                        illum
+                        quam id recusandae culpa saepe aliquam. Voluptatibus nemo corporis mollitia deleniti nesciunt
+                        ducimus, eveniet ex autem. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
+                        corrupti
+                        officiis quia at pariatur, unde nulla perspiciatis voluptatibus, exercitationem hic quibusdam
+                        quod
+                        sunt, voluptate vitae ut debitis. At, perferendis modi.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae provident quidem delectus atque,
+                        nemo nobis? Hic, distinctio quod. Facilis sint itaque reiciendis facere omnis nobis ratione unde
+                        nisi quas commodi?</p>
+                    <div class="container_btn pg-title__container_btn">
+                        <div class="container_btn-items btn-fixed-35rem">
+                            <a href="../../leitor/index.html?work=livro-arte-volume-1-ainda-estou-aqui&episode=unico"
+                                class="btn btn--xl btn--full btn--filled">Ler agora</a>
+                        </div>
+                        <div class="container_btn-items btn-fixed-46">
+                            <a class="btn btn-icon--md btn--tonal">
+                                <img src="../../assets/icon-dark/favorite.svg" alt="" class="btn_svg">
+                            </a>
+                        </div>
+                        <div class="container_btn-items btn-fixed-46">
+                            <a class="btn btn-icon--md btn--tonal">
+                                <img src="../../assets/icon-dark/share.svg" alt="" class="btn_svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="fluid-container_item boder-radius_content">
+                    <div class="tabs" data-tabs>
+                        <!-- ul com papel de lista de abas -->
+                        <ul class="tabs_header surface-0 color_bg--gray-9" role="tablist" aria-label="Abas de Conteúdo">
+                            <li class="tabs_item" role="presentation">
+                                <button data-tab="aba1" aria-controls="panel-aba1" id="tab-aba1" tabindex="0" role="tab"
+                                    aria-selected="true" class="tabs_button tabs_button--active">
+                                    <span class="tbs_btn-txt">Capítulos</span>
+                                </button>
+                            </li>
+                            <li class="tabs_item" role="presentation">
+                                <button data-tab="aba2" aria-controls="panel-aba2" id="tab-aba2" tabindex="-1"
+                                    role="tab" aria-selected="false" class="tabs_button">
+                                    <span class="tbs_btn-txt">Sobre</span>
+                                </button>
+                            </li>
+                            <li class="tabs_item" role="presentation">
+                                <button data-tab="aba3" aria-controls="panel-aba3" id="tab-aba3" tabindex="-1"
+                                    role="tab" aria-selected="false" class="tabs_button">
+                                    <span class="tbs_btn-txt">Coleção</span>
+                                </button>
+                            </li>
+                            <!-- <li class="tabs_item" role="presentation">
+                            <button data-tab="aba4" aria-controls="panel-aba4" id="tab-aba4" tabindex="-1" role="tab"
+                                aria-selected="false" class="tabs_button">
+                                <span class="tbs_btn-txt">Coleção</span>
+                            </button>
+                        </li>
+                        <li class="tabs_item" role="presentation">
+                            <button data-tab="aba5" aria-controls="panel-aba5" id="tab-aba5" tabindex="-1" role="tab"
+                                aria-selected="false" class="tabs_button">
+                                <span class="tbs_btn-txt">Coleção</span>
+                            </button>
+                        </li> -->
+                        </ul>
+                        <!-- Container dos conteúdos -->
+                        <div class="tabs_content-container">
+                            <div id="panel-aba1" data-content="aba1" aria-labelledby="tab-aba1"
+                                class="tabs_panel tabs_panel--active content_container boder-radius_content"
+                                role="tabpanel">
+
+                                <!-- <p class="h3">Conteúdo da primeira aba...</p> -->
+                                <section class="container_content_chapters boder-radius_content"
+                                    aria-label="Lista de episódios">
+                                    <div class="content_chapters_list" id="episode-list">
+                                        <!-- Os episódios serão inseridos aqui pelo JavaScript -->
+                                    </div>
+                                </section>
+
+                            </div>
+                            <div id="panel-aba2" data-content="aba2" aria-labelledby="tab-aba2"
+                                class="tabs_panel content_container boder-radius_content" role="tabpanel" hidden>
+                                <p class="h3">Conteúdo da segunda aba...</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error rerum veritatis
+                                    facilis id
+                                    itaque possimus animi repellat a ad accusamus eum, dignissimos vitae consequatur
+                                    aspernatur,
+                                    delectus, quo laudantium? Vero, rerum?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error rerum veritatis
+                                    facilis id
+                                    itaque possimus animi repellat a ad accusamus eum, dignissimos vitae consequatur
+                                    aspernatur,
+                                    delectus, quo laudantium? Vero, rerum?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error rerum veritatis
+                                    facilis id
+                                    itaque possimus animi repellat a ad accusamus eum, dignissimos vitae consequatur
+                                    aspernatur,
+                                    delectus, quo laudantium? Vero, rerum?</p>
+                            </div>
+                            <div id="panel-aba3" data-content="aba3" aria-labelledby="tab-aba3"
+                                class="tabs_panel content_container boder-radius_content" role="tabpanel" hidden>
+                                <p class="h3">Conteúdo da terceira aba...</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error rerum veritatis
+                                    facilis id
+                                    itaque possimus animi repellat a ad accusamus eum, dignissimos vitae consequatur
+                                    aspernatur,
+                                    delectus, quo laudantium? Vero, rerum?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error rerum veritatis
+                                    facilis id
+                                    itaque possimus animi repellat a ad accusamus eum, dignissimos vitae consequatur
+                                    aspernatur,
+                                    delectus, quo laudantium? Vero, rerum?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error rerum veritatis
+                                    facilis id
+                                    itaque possimus animi repellat a ad accusamus eum, dignissimos vitae consequatur
+                                    aspernatur,
+                                    delectus, quo laudantium? Vero, rerum?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    
+
     <section class="section">
         <div class="section_container">
             <div class="container_table-style boder-radius_content">

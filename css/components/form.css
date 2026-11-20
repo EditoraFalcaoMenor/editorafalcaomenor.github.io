@@ -6,7 +6,7 @@
     background-color: var(--surface-1);
     padding: var(--container-pad);
     width: 100%;
-    max-width: var(--w-max_cont);
+    /* max-width: 35rem; */
 }
 
 .form_field{

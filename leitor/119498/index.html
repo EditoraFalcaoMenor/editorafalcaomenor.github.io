@@ -13,7 +13,38 @@
     <script src="../../js/script.js" defer></script>
 
     <style>
+        /* Container fixo no topo da página */
+        .reading-progress-container {
+            /* position: fixed; */
+            /* top: 0; */
+            /* left: 0; */
+            /* align-content: center; */
+            width: 100%;
+            max-width: 30rem;
+            height: auto;
+            /* Espessura da linha */
+            background: #ffffff39;
+            background-color: var(--surface-1);
+            backdrop-filter: blur(var(--space-40));
+            z-index: 9999;
+            /* Garante que fique acima de tudo */
+            /* padding: 10px; */
+            border-radius: 300px;
+            overflow: hidden;
+        }
 
+        /* A barra que vai preenchendo */
+        .reading-progress-bar {
+            height: 6px;
+            width: 0%;
+            /* background: var(--color-secondary); */
+            background-color: var(--color-white);
+            /* Cor da barra (ex: azul) */
+            transition: width 0.1s ease-out;
+            /* Suaviza o movimento */
+            /* border: 2px solid white; */
+            border-radius: 300px;
+        }
     </style>
 </head>
 
@@ -28,6 +59,11 @@
                     </a>
                     <p class="in-nav_favicon-title">Livro Arte, vol. 1</p>
                 </div>
+            </div>
+
+            <!-- Barra de progresso de leitura -->
+            <div class="reading-progress-container">
+                <div class="reading-progress-bar" id="progressBar"></div>
             </div>
 
             <div class="in-nav_group">
@@ -68,6 +104,16 @@
             <a href="../../title/119498/" class="btn btn--xl btn--filled">Retornar</a>
         </div>
     </section>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+    </script>
 </body>
 
 </html>
