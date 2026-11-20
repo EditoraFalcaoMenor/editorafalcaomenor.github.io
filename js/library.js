@@ -1,5 +1,5 @@
 
-const WORKS_URL = "/json/works.json";
+const WORKS_URL = './json/works.json';
 
 // Carregar todas as obras
 async function loadWorks() {

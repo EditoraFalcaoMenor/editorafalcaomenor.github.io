@@ -37,7 +37,7 @@ async function loadFeaturedWorks() {
 
             const link = document.createElement("a");
 
-            link.href = `/title/?work=${encodeURIComponent(work.slug)}`;
+            link.href = `../title/?work=${encodeURIComponent(work.slug)}`;
 
             // Capa
             const image = document.createElement("img");
